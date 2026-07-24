@@ -1,0 +1,11 @@
+{
+  "editionLabel": "Setup Preview",
+  "cutoffLabel": "Awaiting first successful Sunday update",
+  "updatedLabel": "Not published yet",
+  "sourceStatus": "Repository ready",
+  "charts": {
+    "songs": {"week":{"rangeLabel":"FIRST LIVE EDITION PENDING","items":[],"analysis":{}},"month":{"rangeLabel":"FIRST LIVE EDITION PENDING","items":[],"analysis":{}},"year":{"rangeLabel":"FIRST LIVE EDITION PENDING","items":[],"analysis":{}},"allTime":{"rangeLabel":"FIRST LIVE EDITION PENDING","items":[],"analysis":{}}},
+    "artists": {"week":{"rangeLabel":"FIRST LIVE EDITION PENDING","items":[],"analysis":{}},"month":{"rangeLabel":"FIRST LIVE EDITION PENDING","items":[],"analysis":{}},"year":{"rangeLabel":"FIRST LIVE EDITION PENDING","items":[],"analysis":{}},"allTime":{"rangeLabel":"FIRST LIVE EDITION PENDING","items":[],"analysis":{}}},
+    "albums": {"week":{"rangeLabel":"FIRST LIVE EDITION PENDING","items":[],"analysis":{}},"month":{"rangeLabel":"FIRST LIVE EDITION PENDING","items":[],"analysis":{}},"year":{"rangeLabel":"FIRST LIVE EDITION PENDING","items":[],"analysis":{}},"allTime":{"rangeLabel":"FIRST LIVE EDITION PENDING","items":[],"analysis":{}}}
+  }
+}
