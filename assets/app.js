@@ -17,11 +17,18 @@ const playlists = [
   { name: '720S', id: '7u6vXVHXiZXY64MGiWPLgd', url: 'https://open.spotify.com/playlist/7u6vXVHXiZXY64MGiWPLgd?si=d64caeeb69d64ef0&pt=77d60c2d1e4974100cb1d76ed9c6face' },
   { name: 'Repeat Rewind', id: '37i9dQZF1EpPWup4plZPDb', url: 'https://open.spotify.com/playlist/37i9dQZF1EpPWup4plZPDb?si=2b328c1d3d1c4283' },
 ];
+const validCategories = ['songs', 'artists', 'albums'];
+const validPeriods = ['week', 'month', 'year', 'allTime', 'custom'];
+const params = new URLSearchParams(location.search);
 
 const state = {
-  category: 'songs', period: 'week', playlist: 0,
-  chart: null, loading: false, fallback: null,
-  custom: { start: '', end: '' },
+  category: validCategories.includes(params.get('category')) ? params.get('category') : 'songs',
+  period: validPeriods.includes(params.get('period')) ? params.get('period') : 'week',
+  playlist: 0,
+  chart: null,
+  loading: false,
+  fallback: null,
+  custom: { start: params.get('start') || '', end: params.get('end') || '' },
   calendar: { start: '', end: '', month: null },
 };
 
@@ -61,6 +68,15 @@ function art(item, accent) {
   return `<div class="${cls} art-fallback" style="--accent:${accent}">${esc(initials(item.name))}</div>`;
 }
 
+function updateUrl() {
+  const next = new URLSearchParams({ category: state.category, period: state.period });
+  if (state.period === 'custom' && state.custom.start && state.custom.end) {
+    next.set('start', state.custom.start);
+    next.set('end', state.custom.end);
+  }
+  history.replaceState(null, '', `${location.pathname}?${next}`);
+}
+
 function renderAnalysis(chart) {
   const analysis = chart?.analysis || {};
   $('headline').textContent = analysis.headline || 'No supported chart to analyze.';
@@ -71,6 +87,7 @@ function renderAnalysis(chart) {
 }
 
 function render() {
+  updateUrl();
   document.querySelectorAll('.category').forEach(button => button.classList.toggle('active', button.dataset.category === state.category));
   document.querySelectorAll('.period').forEach(button => button.classList.toggle('active', button.dataset.period === state.period));
   $('customBar').hidden = state.period !== 'custom';
@@ -191,15 +208,60 @@ function initPlaylist() {
 function readableDate(dateString) {
   if (!dateString) return 'Not selected';
   const [year, month, day] = dateString.split('-').map(Number);
-  return new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', year: 'numeric' }).format(new Date(Date.UTC(year, month - 1, day, 12)));
+  return new Intl.DateTimeFormat('en-US', { timeZone: 'UTC', month: 'short', day: 'numeric', year: 'numeric' }).format(new Date(Date.UTC(year, month - 1, day)));
+}
+
+function monthLabel(dateString) {
+  const [year, month] = dateString.split('-').map(Number);
+  return new Intl.DateTimeFormat('en-US', { timeZone: 'UTC', month: 'long', year: 'numeric' }).format(new Date(Date.UTC(year, month - 1, 1)));
+}
+
+function inputDate(dateString) {
+  if (!dateString) return '';
+  const [year, month, day] = dateString.split('-');
+  return `${month}/${day}/${year}`;
+}
+
+function formatTypedDate(value) {
+  const digits = value.replace(/\D/g, '').slice(0, 8);
+  if (digits.length <= 2) return digits;
+  if (digits.length <= 4) return `${digits.slice(0, 2)}/${digits.slice(2)}`;
+  return `${digits.slice(0, 2)}/${digits.slice(2, 4)}/${digits.slice(4)}`;
+}
+
+function parseTypedDate(value) {
+  const match = value.trim().match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/);
+  if (!match) return null;
+  const month = Number(match[1]), day = Number(match[2]), year = Number(match[3]);
+  const check = new Date(Date.UTC(year, month - 1, day));
+  if (check.getUTCFullYear() !== year || check.getUTCMonth() + 1 !== month || check.getUTCDate() !== day) return null;
+  return `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
 }
 
 function monthKey(dateString) { return dateString.slice(0, 7); }
 function firstOfMonth(dateString) { return `${monthKey(dateString)}-01`; }
 function shiftMonth(dateString, offset) {
   const [year, month] = dateString.split('-').map(Number);
-  const dt = new Date(Date.UTC(year, month - 1 + offset, 1));
-  return dt.toISOString().slice(0, 10);
+  const date = new Date(Date.UTC(year, month - 1 + offset, 1));
+  return date.toISOString().slice(0, 10);
+}
+
+function calendarValidation() {
+  if (!state.calendar.start || !state.calendar.end) return 'Choose or type both dates.';
+  if (state.calendar.start < ALL_TIME_START) return 'The earliest supported date is November 1, 2020.';
+  if (state.calendar.end > isoToday()) return 'The end date cannot be later than today.';
+  if (state.calendar.start > state.calendar.end) return 'The start date must come before the end date.';
+  return '';
+}
+
+function setCalendarError(message = '') {
+  $('calendarError').textContent = message;
+  $('calendarError').classList.toggle('visible', Boolean(message));
+}
+
+function syncCalendarInputs() {
+  $('calendarStartInput').value = inputDate(state.calendar.start);
+  $('calendarEndInput').value = inputDate(state.calendar.end);
 }
 
 function renderMonth(monthString) {
@@ -207,7 +269,6 @@ function renderMonth(monthString) {
   const first = new Date(Date.UTC(year, month - 1, 1));
   const days = new Date(Date.UTC(year, month, 0)).getUTCDate();
   const offset = first.getUTCDay();
-  const heading = new Intl.DateTimeFormat('en-US', { month: 'long', year: 'numeric' }).format(first);
   const cells = [];
   for (let i = 0; i < offset; i += 1) cells.push('<span class="calendar-blank"></span>');
   const today = isoToday();
@@ -218,20 +279,28 @@ function renderMonth(monthString) {
     const inRange = state.calendar.start && state.calendar.end && date > state.calendar.start && date < state.calendar.end;
     cells.push(`<button class="calendar-day${selected ? ' selected' : ''}${inRange ? ' in-range' : ''}" data-date="${date}" ${disabled ? 'disabled' : ''}>${day}</button>`);
   }
-  return `<section class="calendar-month"><h3>${heading}</h3><div class="weekdays"><span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span></div><div class="days-grid">${cells.join('')}</div></section>`;
+  return `<section class="calendar-month"><h3>${monthLabel(monthString)}</h3><div class="weekdays"><span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span></div><div class="days-grid">${cells.join('')}</div></section>`;
 }
 
-function renderCalendar() {
+function renderCalendar({ syncInputs = true } = {}) {
   const first = state.calendar.month || firstOfMonth(state.calendar.start || isoToday());
+  state.calendar.month = first;
   const count = window.matchMedia('(max-width: 700px)').matches ? 1 : 2;
   $('calendarMonths').innerHTML = Array.from({ length: count }, (_, i) => renderMonth(shiftMonth(first, i))).join('');
-  $('calendarHeading').textContent = count === 1 ? readableDate(first).replace(/ 1,/, ',') : `${readableDate(first).replace(/ 1,/, ',')} — ${readableDate(shiftMonth(first, 1)).replace(/ 1,/, ',')}`;
+  $('calendarHeading').textContent = count === 1 ? monthLabel(first) : `${monthLabel(first)} — ${monthLabel(shiftMonth(first, 1))}`;
   $('calendarStartLabel').textContent = readableDate(state.calendar.start);
   $('calendarEndLabel').textContent = readableDate(state.calendar.end);
-  $('calendarApply').disabled = !(state.calendar.start && state.calendar.end);
+  const validation = calendarValidation();
+  $('calendarApply').disabled = Boolean(validation);
+  const minMonth = firstOfMonth(ALL_TIME_START);
+  const maxMonth = firstOfMonth(isoToday());
+  $('calendarPrev').disabled = shiftMonth(first, -1) < minMonth;
+  $('calendarNext').disabled = shiftMonth(first, count) > maxMonth;
+  if (syncInputs) syncCalendarInputs();
   document.querySelectorAll('.calendar-day[data-date]').forEach(button => {
     button.onclick = () => {
       const date = button.dataset.date;
+      setCalendarError('');
       if (!state.calendar.start || state.calendar.end) {
         state.calendar.start = date;
         state.calendar.end = '';
@@ -246,10 +315,38 @@ function renderCalendar() {
   });
 }
 
+function applyTypedField(kind, { jump = true, reportIncomplete = false } = {}) {
+  const input = kind === 'start' ? $('calendarStartInput') : $('calendarEndInput');
+  const parsed = parseTypedDate(input.value);
+  if (!parsed) {
+    if (reportIncomplete || input.value.length >= 8) setCalendarError('Enter a real date using MM/DD/YYYY.');
+    return false;
+  }
+  if (parsed < ALL_TIME_START) {
+    setCalendarError('The earliest supported date is November 1, 2020.');
+    return false;
+  }
+  if (parsed > isoToday()) {
+    setCalendarError('Dates cannot be later than today.');
+    return false;
+  }
+  if (kind === 'end' && state.calendar.start && parsed < state.calendar.start) {
+    setCalendarError('The end date cannot be before the start date.');
+    return false;
+  }
+  state.calendar[kind] = parsed;
+  if (kind === 'start' && state.calendar.end && parsed > state.calendar.end) state.calendar.end = '';
+  if (jump) state.calendar.month = firstOfMonth(kind === 'start' ? parsed : (state.calendar.start || parsed));
+  setCalendarError('');
+  renderCalendar();
+  return true;
+}
+
 function openCalendar() {
   state.calendar.start = state.custom.start;
   state.calendar.end = state.custom.end;
   state.calendar.month = firstOfMonth(state.custom.start || isoToday());
+  setCalendarError('');
   $('calendarOverlay').hidden = false;
   requestAnimationFrame(() => $('calendarOverlay').classList.add('open'));
   document.body.classList.add('modal-open');
@@ -272,15 +369,39 @@ function initCalendar() {
   $('closeCalendar').onclick = closeCalendar;
   $('calendarCancel').onclick = closeCalendar;
   $('calendarOverlay').onclick = event => { if (event.target === $('calendarOverlay')) closeCalendar(); };
-  $('calendarPrev').onclick = () => { state.calendar.month = shiftMonth(state.calendar.month, -1); renderCalendar(); };
-  $('calendarNext').onclick = () => { state.calendar.month = shiftMonth(state.calendar.month, 1); renderCalendar(); };
+  $('calendarPrev').onclick = () => { if (!$('calendarPrev').disabled) { state.calendar.month = shiftMonth(state.calendar.month, -1); renderCalendar(); } };
+  $('calendarNext').onclick = () => { if (!$('calendarNext').disabled) { state.calendar.month = shiftMonth(state.calendar.month, 1); renderCalendar(); } };
   $('calendarApply').onclick = () => {
+    const startValid = applyTypedField('start', { reportIncomplete: true });
+    const endValid = applyTypedField('end', { reportIncomplete: true, jump: false });
+    if (!startValid || !endValid) return;
+    const validation = calendarValidation();
+    if (validation) { setCalendarError(validation); return; }
     state.custom.start = state.calendar.start;
     state.custom.end = state.calendar.end;
     updateCustomText();
     closeCalendar();
+    updateUrl();
     $('customStatus').textContent = 'Dates selected. Press Run Range to build the live custom chart.';
   };
+
+  [['calendarStartInput', 'start'], ['calendarEndInput', 'end']].forEach(([id, kind]) => {
+    const input = $(id);
+    input.addEventListener('input', () => {
+      input.value = formatTypedDate(input.value);
+      setCalendarError('');
+      if (input.value.length === 10) applyTypedField(kind, { jump: kind === 'start' });
+    });
+    input.addEventListener('blur', () => { if (input.value) applyTypedField(kind, { jump: kind === 'start', reportIncomplete: true }); });
+    input.addEventListener('keydown', event => {
+      if (event.key === 'Enter') {
+        event.preventDefault();
+        const valid = applyTypedField(kind, { jump: kind === 'start', reportIncomplete: true });
+        if (valid && !calendarValidation()) $('calendarApply').click();
+      }
+    });
+  });
+
   document.querySelectorAll('[data-quick]').forEach(button => {
     button.onclick = () => {
       const today = isoToday();
@@ -291,6 +412,7 @@ function initCalendar() {
       if (type === 'all') state.calendar.start = ALL_TIME_START;
       state.calendar.end = today;
       state.calendar.month = firstOfMonth(state.calendar.start);
+      setCalendarError('');
       renderCalendar();
     };
   });
@@ -305,7 +427,13 @@ async function boot() {
   } catch { state.fallback = null; }
   initPlaylist();
   initCalendar();
+  updateCustomText();
   await loadChart(false);
+  const returnScroll = Number(sessionStorage.getItem('spr-return-scroll'));
+  if (Number.isFinite(returnScroll) && returnScroll > 0) {
+    sessionStorage.removeItem('spr-return-scroll');
+    requestAnimationFrame(() => window.scrollTo({ top: returnScroll, behavior: 'auto' }));
+  }
 }
 
 document.querySelectorAll('.category').forEach(button => {
@@ -322,6 +450,7 @@ document.querySelectorAll('.period').forEach(button => {
   };
 });
 
+$('viewTop25').addEventListener('click', () => sessionStorage.setItem('spr-return-scroll', String(window.scrollY)));
 $('refreshLive').onclick = () => loadChart(true);
 $('runCustom').onclick = async () => {
   $('customStatus').textContent = `Building ${categoryLabel(state.category).toLowerCase()} rankings for the selected dates…`;
