@@ -1,0 +1,608 @@
+{
+  "windows": {
+    "week": [
+      "2026-07-12T09:00:00-04:00",
+      "2026-07-19T09:00:00-04:00"
+    ],
+    "month": [
+      "2026-06-21T09:00:00-04:00",
+      "2026-07-19T09:00:00-04:00"
+    ]
+  },
+  "dateStats": {
+    "items": {
+      "hours": {
+        "0": {
+          "count": 1,
+          "durationMs": 247946
+        },
+        "8": {
+          "count": 2,
+          "durationMs": 415665
+        },
+        "9": {
+          "count": 8,
+          "durationMs": 1721793
+        },
+        "10": {
+          "count": 16,
+          "durationMs": 3664051
+        },
+        "11": {
+          "count": 9,
+          "durationMs": 1658496
+        },
+        "12": {
+          "count": 19,
+          "durationMs": 4112810
+        },
+        "13": {
+          "count": 3,
+          "durationMs": 589573
+        },
+        "15": {
+          "count": 20,
+          "durationMs": 4137614
+        },
+        "16": {
+          "count": 14,
+          "durationMs": 3169792
+        },
+        "17": {
+          "count": 3,
+          "durationMs": 592474
+        },
+        "18": {
+          "count": 16,
+          "durationMs": 3392062
+        },
+        "19": {
+          "count": 10,
+          "durationMs": 2179324
+        },
+        "20": {
+          "count": 14,
+          "durationMs": 3323567
+        },
+        "21": {
+          "count": 1,
+          "durationMs": 175665
+        },
+        "22": {
+          "count": 13,
+          "durationMs": 2822731
+        },
+        "23": {
+          "count": 17,
+          "durationMs": 3557887
+        }
+      },
+      "months": {
+        "7": {
+          "count": 166,
+          "durationMs": 35761450
+        }
+      },
+      "weekDays": {
+        "2": {
+          "count": 16,
+          "durationMs": 3602096
+        },
+        "3": {
+          "count": 40,
+          "durationMs": 8344440
+        },
+        "4": {
+          "count": 23,
+          "durationMs": 4827801
+        },
+        "5": {
+          "count": 31,
+          "durationMs": 6924597
+        },
+        "6": {
+          "count": 56,
+          "durationMs": 12062516
+        }
+      },
+      "monthDays": {
+        "14": {
+          "count": 16,
+          "durationMs": 3602096
+        },
+        "15": {
+          "count": 40,
+          "durationMs": 8344440
+        },
+        "16": {
+          "count": 23,
+          "durationMs": 4827801
+        },
+        "17": {
+          "count": 31,
+          "durationMs": 6924597
+        },
+        "18": {
+          "count": 56,
+          "durationMs": 12062516
+        }
+      },
+      "years": {
+        "2026": {
+          "count": 166,
+          "durationMs": 35761450
+        }
+      },
+      "days": {
+        "14": {
+          "count": 16,
+          "durationMs": 3602096
+        },
+        "15": {
+          "count": 40,
+          "durationMs": 8344440
+        },
+        "16": {
+          "count": 23,
+          "durationMs": 4827801
+        },
+        "17": {
+          "count": 31,
+          "durationMs": 6924597
+        },
+        "18": {
+          "count": 56,
+          "durationMs": 12062516
+        }
+      },
+      "weekdays": {
+        "2": {
+          "count": 16,
+          "durationMs": 3602096
+        },
+        "3": {
+          "count": 40,
+          "durationMs": 8344440
+        },
+        "4": {
+          "count": 23,
+          "durationMs": 4827801
+        },
+        "5": {
+          "count": 31,
+          "durationMs": 6924597
+        },
+        "6": {
+          "count": 56,
+          "durationMs": 12062516
+        }
+      }
+    }
+  },
+  "categories": {
+    "tracks": {
+      "week": [
+        {
+          "id": 345239042,
+          "name": "LET EM KNOW",
+          "streams": 6,
+          "playedMs": 1053990,
+          "position": 1
+        },
+        {
+          "id": 2759156,
+          "name": "Lucky You (feat. Joyner Lucas)",
+          "streams": 5,
+          "playedMs": 1209358,
+          "position": 2
+        },
+        {
+          "id": 339869821,
+          "name": "Monsters",
+          "streams": 5,
+          "playedMs": 925400,
+          "position": 3
+        },
+        {
+          "id": 351243365,
+          "name": "GTA 6",
+          "streams": 5,
+          "playedMs": 840905,
+          "position": 4
+        },
+        {
+          "id": 319896307,
+          "name": "White Noise",
+          "streams": 4,
+          "playedMs": 681888,
+          "position": 5
+        },
+        {
+          "id": 346471461,
+          "name": "TRAFFIC",
+          "streams": 4,
+          "playedMs": 960214,
+          "position": 6
+        },
+        {
+          "id": 943118,
+          "name": "Remember This",
+          "streams": 3,
+          "playedMs": 660386,
+          "position": 7
+        },
+        {
+          "id": 1313361,
+          "name": "Wild for the Night (feat. Skrillex & Birdy Nam Nam)",
+          "streams": 3,
+          "playedMs": 637920,
+          "position": 8
+        },
+        {
+          "id": 4034870,
+          "name": "Foreplay",
+          "streams": 3,
+          "playedMs": 462864,
+          "position": 9
+        },
+        {
+          "id": 4844,
+          "name": "Counting Stars",
+          "streams": 2,
+          "playedMs": 437265,
+          "position": 10
+        }
+      ],
+      "month": [
+        {
+          "id": 345239042,
+          "name": "LET EM KNOW",
+          "streams": 6,
+          "playedMs": 1053990,
+          "position": 1
+        },
+        {
+          "id": 2759156,
+          "name": "Lucky You (feat. Joyner Lucas)",
+          "streams": 5,
+          "playedMs": 1209358,
+          "position": 2
+        },
+        {
+          "id": 339869821,
+          "name": "Monsters",
+          "streams": 5,
+          "playedMs": 925400,
+          "position": 3
+        },
+        {
+          "id": 351243365,
+          "name": "GTA 6",
+          "streams": 5,
+          "playedMs": 840905,
+          "position": 4
+        },
+        {
+          "id": 319896307,
+          "name": "White Noise",
+          "streams": 4,
+          "playedMs": 681888,
+          "position": 5
+        },
+        {
+          "id": 346471461,
+          "name": "TRAFFIC",
+          "streams": 4,
+          "playedMs": 960214,
+          "position": 6
+        },
+        {
+          "id": 943118,
+          "name": "Remember This",
+          "streams": 3,
+          "playedMs": 660386,
+          "position": 7
+        },
+        {
+          "id": 1313361,
+          "name": "Wild for the Night (feat. Skrillex & Birdy Nam Nam)",
+          "streams": 3,
+          "playedMs": 637920,
+          "position": 8
+        },
+        {
+          "id": 4034870,
+          "name": "Foreplay",
+          "streams": 3,
+          "playedMs": 462864,
+          "position": 9
+        },
+        {
+          "id": 4844,
+          "name": "Counting Stars",
+          "streams": 2,
+          "playedMs": 437265,
+          "position": 10
+        }
+      ]
+    },
+    "artists": {
+      "week": [
+        {
+          "id": 89493,
+          "name": "Joyner Lucas",
+          "streams": 32,
+          "playedMs": 6520829,
+          "position": 1
+        },
+        {
+          "id": 11615,
+          "name": "The Weeknd",
+          "streams": 24,
+          "playedMs": 5418027,
+          "position": 2
+        },
+        {
+          "id": 55437,
+          "name": "NF",
+          "streams": 13,
+          "playedMs": 2810805,
+          "position": 3
+        },
+        {
+          "id": 12707,
+          "name": "Eminem",
+          "streams": 9,
+          "playedMs": 2499063,
+          "position": 4
+        },
+        {
+          "id": 2148,
+          "name": "T.I.",
+          "streams": 8,
+          "playedMs": 1496204,
+          "position": 5
+        },
+        {
+          "id": 22346,
+          "name": "Post Malone",
+          "streams": 8,
+          "playedMs": 1378212,
+          "position": 6
+        },
+        {
+          "id": 11618,
+          "name": "Drake",
+          "streams": 7,
+          "playedMs": 1570622,
+          "position": 7
+        },
+        {
+          "id": 15267,
+          "name": "Michael Jackson",
+          "streams": 6,
+          "playedMs": 1504372,
+          "position": 8
+        },
+        {
+          "id": 18061,
+          "name": "Kendrick Lamar",
+          "streams": 6,
+          "playedMs": 1398839,
+          "position": 9
+        },
+        {
+          "id": 36,
+          "name": "Future",
+          "streams": 5,
+          "playedMs": 1080000,
+          "position": 10
+        }
+      ],
+      "month": [
+        {
+          "id": 89493,
+          "name": "Joyner Lucas",
+          "streams": 32,
+          "playedMs": 6520829,
+          "position": 1
+        },
+        {
+          "id": 11615,
+          "name": "The Weeknd",
+          "streams": 24,
+          "playedMs": 5418027,
+          "position": 2
+        },
+        {
+          "id": 55437,
+          "name": "NF",
+          "streams": 13,
+          "playedMs": 2810805,
+          "position": 3
+        },
+        {
+          "id": 12707,
+          "name": "Eminem",
+          "streams": 9,
+          "playedMs": 2499063,
+          "position": 4
+        },
+        {
+          "id": 2148,
+          "name": "T.I.",
+          "streams": 8,
+          "playedMs": 1496204,
+          "position": 5
+        },
+        {
+          "id": 22346,
+          "name": "Post Malone",
+          "streams": 8,
+          "playedMs": 1378212,
+          "position": 6
+        },
+        {
+          "id": 11618,
+          "name": "Drake",
+          "streams": 7,
+          "playedMs": 1570622,
+          "position": 7
+        },
+        {
+          "id": 15267,
+          "name": "Michael Jackson",
+          "streams": 6,
+          "playedMs": 1504372,
+          "position": 8
+        },
+        {
+          "id": 18061,
+          "name": "Kendrick Lamar",
+          "streams": 6,
+          "playedMs": 1398839,
+          "position": 9
+        },
+        {
+          "id": 36,
+          "name": "Future",
+          "streams": 5,
+          "playedMs": 1080000,
+          "position": 10
+        }
+      ]
+    },
+    "albums": {
+      "week": [
+        {
+          "id": 56664932,
+          "name": "ADHD 2",
+          "streams": 9,
+          "playedMs": 1722451,
+          "position": 1
+        },
+        {
+          "id": 12666473,
+          "name": "Starboy",
+          "streams": 6,
+          "playedMs": 1304078,
+          "position": 2
+        },
+        {
+          "id": 68008991,
+          "name": "Kill The King",
+          "streams": 6,
+          "playedMs": 1053990,
+          "position": 3
+        },
+        {
+          "id": 49360,
+          "name": "Hollywood's Bleeding",
+          "streams": 5,
+          "playedMs": 871985,
+          "position": 4
+        },
+        {
+          "id": 329784,
+          "name": "Kamikaze",
+          "streams": 5,
+          "playedMs": 1209358,
+          "position": 5
+        },
+        {
+          "id": 94161,
+          "name": "Perception",
+          "streams": 4,
+          "playedMs": 840386,
+          "position": 6
+        },
+        {
+          "id": 138152,
+          "name": "ADHD",
+          "streams": 4,
+          "playedMs": 862501,
+          "position": 7
+        },
+        {
+          "id": 12964899,
+          "name": "HOPE",
+          "streams": 4,
+          "playedMs": 893973,
+          "position": 8
+        },
+        {
+          "id": 50203201,
+          "name": "Hurry Up Tomorrow",
+          "streams": 4,
+          "playedMs": 1017525,
+          "position": 9
+        }
+      ],
+      "month": [
+        {
+          "id": 56664932,
+          "name": "ADHD 2",
+          "streams": 9,
+          "playedMs": 1722451,
+          "position": 1
+        },
+        {
+          "id": 12666473,
+          "name": "Starboy",
+          "streams": 6,
+          "playedMs": 1304078,
+          "position": 2
+        },
+        {
+          "id": 68008991,
+          "name": "Kill The King",
+          "streams": 6,
+          "playedMs": 1053990,
+          "position": 3
+        },
+        {
+          "id": 49360,
+          "name": "Hollywood's Bleeding",
+          "streams": 5,
+          "playedMs": 871985,
+          "position": 4
+        },
+        {
+          "id": 329784,
+          "name": "Kamikaze",
+          "streams": 5,
+          "playedMs": 1209358,
+          "position": 5
+        },
+        {
+          "id": 94161,
+          "name": "Perception",
+          "streams": 4,
+          "playedMs": 840386,
+          "position": 6
+        },
+        {
+          "id": 138152,
+          "name": "ADHD",
+          "streams": 4,
+          "playedMs": 862501,
+          "position": 7
+        },
+        {
+          "id": 12964899,
+          "name": "HOPE",
+          "streams": 4,
+          "playedMs": 893973,
+          "position": 8
+        },
+        {
+          "id": 50203201,
+          "name": "Hurry Up Tomorrow",
+          "streams": 4,
+          "playedMs": 1017525,
+          "position": 9
+        }
+      ]
+    }
+  }
+}
