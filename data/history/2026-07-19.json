@@ -1,7 +1,7 @@
 {
   "editionLabel": "Week ending Jul 19, 2026",
   "cutoffLabel": "Jul 19, 2026 · 9:00 AM ET",
-  "updatedLabel": "Jul 23, 2026 · 10:32 PM ET",
+  "updatedLabel": "Jul 23, 2026 · 10:34 PM ET",
   "sourceStatus": "stats.fm verified",
   "cutoffIso": "2026-07-19T09:00:00-04:00",
   "isPreview": false,
@@ -36,7 +36,7 @@
             "rank": 1,
             "previousRank": null,
             "peakRank": 1,
-            "chartTenure": "BASELINE"
+            "chartTenure": "2 WKS"
           },
           {
             "id": "2759156",
@@ -63,7 +63,7 @@
             "rank": 2,
             "previousRank": null,
             "peakRank": 2,
-            "chartTenure": "BASELINE"
+            "chartTenure": "2 WKS"
           },
           {
             "id": "339869821",
@@ -90,7 +90,7 @@
             "rank": 3,
             "previousRank": null,
             "peakRank": 3,
-            "chartTenure": "BASELINE"
+            "chartTenure": "2 WKS"
           },
           {
             "id": "351243365",
@@ -117,7 +117,7 @@
             "rank": 4,
             "previousRank": null,
             "peakRank": 4,
-            "chartTenure": "BASELINE"
+            "chartTenure": "2 WKS"
           },
           {
             "id": "346471461",
@@ -144,7 +144,7 @@
             "rank": 5,
             "previousRank": null,
             "peakRank": 5,
-            "chartTenure": "BASELINE"
+            "chartTenure": "2 WKS"
           }
         ],
         "analysis": {
@@ -181,7 +181,7 @@
             "rank": 1,
             "previousRank": null,
             "peakRank": 1,
-            "chartTenure": "BASELINE"
+            "chartTenure": "2 WKS"
           },
           {
             "id": "2759156",
@@ -205,7 +205,7 @@
             "rank": 2,
             "previousRank": null,
             "peakRank": 2,
-            "chartTenure": "BASELINE"
+            "chartTenure": "2 WKS"
           },
           {
             "id": "339869821",
@@ -229,7 +229,7 @@
             "rank": 3,
             "previousRank": null,
             "peakRank": 3,
-            "chartTenure": "BASELINE"
+            "chartTenure": "2 WKS"
           },
           {
             "id": "351243365",
@@ -253,7 +253,7 @@
             "rank": 4,
             "previousRank": null,
             "peakRank": 4,
-            "chartTenure": "BASELINE"
+            "chartTenure": "2 WKS"
           },
           {
             "id": "346471461",
@@ -277,7 +277,7 @@
             "rank": 5,
             "previousRank": null,
             "peakRank": 5,
-            "chartTenure": "BASELINE"
+            "chartTenure": "2 WKS"
           }
         ],
         "analysis": {
@@ -320,7 +320,7 @@
             "trajectoryCaption": "CUMULATIVE CALENDAR-YEAR TRAJECTORY",
             "previousRank": 1,
             "peakRank": 1,
-            "chartTenure": "BASELINE"
+            "chartTenure": "2 EDITIONS"
           },
           {
             "id": "57965",
@@ -350,7 +350,7 @@
             "trajectoryCaption": "CUMULATIVE CALENDAR-YEAR TRAJECTORY",
             "previousRank": 2,
             "peakRank": 2,
-            "chartTenure": "BASELINE"
+            "chartTenure": "2 EDITIONS"
           },
           {
             "id": "1050973",
@@ -380,7 +380,7 @@
             "trajectoryCaption": "CUMULATIVE CALENDAR-YEAR TRAJECTORY",
             "previousRank": 3,
             "peakRank": 3,
-            "chartTenure": "BASELINE"
+            "chartTenure": "2 EDITIONS"
           },
           {
             "id": "4075081",
@@ -410,7 +410,7 @@
             "trajectoryCaption": "CUMULATIVE CALENDAR-YEAR TRAJECTORY",
             "previousRank": 4,
             "peakRank": 4,
-            "chartTenure": "BASELINE"
+            "chartTenure": "2 EDITIONS"
           },
           {
             "id": "188127767",
@@ -440,7 +440,7 @@
             "trajectoryCaption": "CUMULATIVE CALENDAR-YEAR TRAJECTORY",
             "previousRank": 9,
             "peakRank": 5,
-            "chartTenure": "BASELINE"
+            "chartTenure": "2 EDITIONS"
           }
         ],
         "analysis": {
@@ -483,7 +483,7 @@
             "trajectoryCaption": "CUMULATIVE LIFETIME TRAJECTORY",
             "previousRank": 1,
             "peakRank": 1,
-            "chartTenure": "BASELINE"
+            "chartTenure": "2 EDITIONS"
           },
           {
             "id": "555740",
@@ -513,7 +513,7 @@
             "trajectoryCaption": "CUMULATIVE LIFETIME TRAJECTORY",
             "previousRank": 2,
             "peakRank": 2,
-            "chartTenure": "BASELINE"
+            "chartTenure": "2 EDITIONS"
           },
           {
             "id": "350964",
@@ -543,7 +543,7 @@
             "trajectoryCaption": "CUMULATIVE LIFETIME TRAJECTORY",
             "previousRank": 3,
             "peakRank": 3,
-            "chartTenure": "BASELINE"
+            "chartTenure": "2 EDITIONS"
           },
           {
             "id": "1005952",
@@ -573,7 +573,7 @@
             "trajectoryCaption": "CUMULATIVE LIFETIME TRAJECTORY",
             "previousRank": 4,
             "peakRank": 4,
-            "chartTenure": "BASELINE"
+            "chartTenure": "2 EDITIONS"
           },
           {
             "id": "1489480",
@@ -603,7 +603,7 @@
             "trajectoryCaption": "CUMULATIVE LIFETIME TRAJECTORY",
             "previousRank": 6,
             "peakRank": 5,
-            "chartTenure": "BASELINE"
+            "chartTenure": "2 EDITIONS"
           }
         ],
         "analysis": {
@@ -647,7 +647,7 @@
             "rank": 1,
             "previousRank": null,
             "peakRank": 1,
-            "chartTenure": "BASELINE"
+            "chartTenure": "2 WKS"
           },
           {
             "id": "11615",
@@ -676,7 +676,7 @@
             "rank": 2,
             "previousRank": null,
             "peakRank": 2,
-            "chartTenure": "BASELINE"
+            "chartTenure": "2 WKS"
           },
           {
             "id": "55437",
@@ -706,7 +706,7 @@
             "rank": 3,
             "previousRank": null,
             "peakRank": 3,
-            "chartTenure": "BASELINE"
+            "chartTenure": "2 WKS"
           },
           {
             "id": "12707",
@@ -737,7 +737,7 @@
             "rank": 4,
             "previousRank": null,
             "peakRank": 4,
-            "chartTenure": "BASELINE"
+            "chartTenure": "2 WKS"
           },
           {
             "id": "2148",
@@ -767,7 +767,7 @@
             "rank": 5,
             "previousRank": null,
             "peakRank": 5,
-            "chartTenure": "BASELINE"
+            "chartTenure": "2 WKS"
           }
         ],
         "analysis": {
@@ -806,7 +806,7 @@
             "rank": 1,
             "previousRank": null,
             "peakRank": 1,
-            "chartTenure": "BASELINE"
+            "chartTenure": "2 WKS"
           },
           {
             "id": "11615",
@@ -832,7 +832,7 @@
             "rank": 2,
             "previousRank": null,
             "peakRank": 2,
-            "chartTenure": "BASELINE"
+            "chartTenure": "2 WKS"
           },
           {
             "id": "55437",
@@ -859,7 +859,7 @@
             "rank": 3,
             "previousRank": null,
             "peakRank": 3,
-            "chartTenure": "BASELINE"
+            "chartTenure": "2 WKS"
           },
           {
             "id": "12707",
@@ -887,7 +887,7 @@
             "rank": 4,
             "previousRank": null,
             "peakRank": 4,
-            "chartTenure": "BASELINE"
+            "chartTenure": "2 WKS"
           },
           {
             "id": "2148",
@@ -914,7 +914,7 @@
             "rank": 5,
             "previousRank": null,
             "peakRank": 5,
-            "chartTenure": "BASELINE"
+            "chartTenure": "2 WKS"
           }
         ],
         "analysis": {
@@ -959,7 +959,7 @@
             "trajectoryCaption": "CUMULATIVE CALENDAR-YEAR TRAJECTORY",
             "previousRank": 1,
             "peakRank": 1,
-            "chartTenure": "BASELINE"
+            "chartTenure": "2 EDITIONS"
           },
           {
             "id": "89493",
@@ -991,7 +991,7 @@
             "trajectoryCaption": "CUMULATIVE CALENDAR-YEAR TRAJECTORY",
             "previousRank": 2,
             "peakRank": 2,
-            "chartTenure": "BASELINE"
+            "chartTenure": "2 EDITIONS"
           },
           {
             "id": "27031",
@@ -1024,7 +1024,7 @@
             "trajectoryCaption": "CUMULATIVE CALENDAR-YEAR TRAJECTORY",
             "previousRank": 3,
             "peakRank": 3,
-            "chartTenure": "BASELINE"
+            "chartTenure": "2 EDITIONS"
           },
           {
             "id": "36",
@@ -1057,7 +1057,7 @@
             "trajectoryCaption": "CUMULATIVE CALENDAR-YEAR TRAJECTORY",
             "previousRank": 4,
             "peakRank": 4,
-            "chartTenure": "BASELINE"
+            "chartTenure": "2 EDITIONS"
           },
           {
             "id": "13537",
@@ -1090,7 +1090,7 @@
             "trajectoryCaption": "CUMULATIVE CALENDAR-YEAR TRAJECTORY",
             "previousRank": 5,
             "peakRank": 5,
-            "chartTenure": "BASELINE"
+            "chartTenure": "2 EDITIONS"
           }
         ],
         "analysis": {
@@ -1135,7 +1135,7 @@
             "trajectoryCaption": "CUMULATIVE LIFETIME TRAJECTORY",
             "previousRank": 1,
             "peakRank": 1,
-            "chartTenure": "BASELINE"
+            "chartTenure": "2 EDITIONS"
           },
           {
             "id": "13537",
@@ -1168,7 +1168,7 @@
             "trajectoryCaption": "CUMULATIVE LIFETIME TRAJECTORY",
             "previousRank": 2,
             "peakRank": 2,
-            "chartTenure": "BASELINE"
+            "chartTenure": "2 EDITIONS"
           },
           {
             "id": "82959",
@@ -1203,7 +1203,7 @@
             "trajectoryCaption": "CUMULATIVE LIFETIME TRAJECTORY",
             "previousRank": 3,
             "peakRank": 3,
-            "chartTenure": "BASELINE"
+            "chartTenure": "2 EDITIONS"
           },
           {
             "id": "27031",
@@ -1236,7 +1236,7 @@
             "trajectoryCaption": "CUMULATIVE LIFETIME TRAJECTORY",
             "previousRank": 4,
             "peakRank": 4,
-            "chartTenure": "BASELINE"
+            "chartTenure": "2 EDITIONS"
           },
           {
             "id": "2148",
@@ -1269,7 +1269,7 @@
             "trajectoryCaption": "CUMULATIVE LIFETIME TRAJECTORY",
             "previousRank": 5,
             "peakRank": 5,
-            "chartTenure": "BASELINE"
+            "chartTenure": "2 EDITIONS"
           }
         ],
         "analysis": {
@@ -1315,7 +1315,7 @@
             "rank": 1,
             "previousRank": null,
             "peakRank": 1,
-            "chartTenure": "BASELINE"
+            "chartTenure": "2 WKS"
           },
           {
             "id": "12666473",
@@ -1345,7 +1345,7 @@
             "rank": 2,
             "previousRank": null,
             "peakRank": 2,
-            "chartTenure": "BASELINE"
+            "chartTenure": "2 WKS"
           },
           {
             "id": "68008991",
@@ -1375,7 +1375,7 @@
             "rank": 3,
             "previousRank": null,
             "peakRank": 3,
-            "chartTenure": "BASELINE"
+            "chartTenure": "2 WKS"
           },
           {
             "id": "329784",
@@ -1407,7 +1407,7 @@
             "rank": 4,
             "previousRank": null,
             "peakRank": 4,
-            "chartTenure": "BASELINE"
+            "chartTenure": "2 WKS"
           },
           {
             "id": "49360",
@@ -1437,7 +1437,7 @@
             "rank": 5,
             "previousRank": null,
             "peakRank": 5,
-            "chartTenure": "BASELINE"
+            "chartTenure": "2 WKS"
           }
         ],
         "analysis": {
@@ -1478,7 +1478,7 @@
             "rank": 1,
             "previousRank": null,
             "peakRank": 1,
-            "chartTenure": "BASELINE"
+            "chartTenure": "2 WKS"
           },
           {
             "id": "12666473",
@@ -1505,7 +1505,7 @@
             "rank": 2,
             "previousRank": null,
             "peakRank": 2,
-            "chartTenure": "BASELINE"
+            "chartTenure": "2 WKS"
           },
           {
             "id": "68008991",
@@ -1532,7 +1532,7 @@
             "rank": 3,
             "previousRank": null,
             "peakRank": 3,
-            "chartTenure": "BASELINE"
+            "chartTenure": "2 WKS"
           },
           {
             "id": "329784",
@@ -1561,7 +1561,7 @@
             "rank": 4,
             "previousRank": null,
             "peakRank": 4,
-            "chartTenure": "BASELINE"
+            "chartTenure": "2 WKS"
           },
           {
             "id": "49360",
@@ -1588,7 +1588,7 @@
             "rank": 5,
             "previousRank": null,
             "peakRank": 5,
-            "chartTenure": "BASELINE"
+            "chartTenure": "2 WKS"
           }
         ],
         "analysis": {
@@ -1635,7 +1635,7 @@
             "trajectoryCaption": "CUMULATIVE CALENDAR-YEAR TRAJECTORY",
             "previousRank": 3,
             "peakRank": 1,
-            "chartTenure": "BASELINE"
+            "chartTenure": "2 EDITIONS"
           },
           {
             "id": "229491",
@@ -1669,7 +1669,7 @@
             "trajectoryCaption": "CUMULATIVE CALENDAR-YEAR TRAJECTORY",
             "previousRank": 1,
             "peakRank": 1,
-            "chartTenure": "BASELINE"
+            "chartTenure": "2 EDITIONS"
           },
           {
             "id": "50203201",
@@ -1703,7 +1703,7 @@
             "trajectoryCaption": "CUMULATIVE CALENDAR-YEAR TRAJECTORY",
             "previousRank": 2,
             "peakRank": 2,
-            "chartTenure": "BASELINE"
+            "chartTenure": "2 EDITIONS"
           },
           {
             "id": "138152",
@@ -1737,7 +1737,7 @@
             "trajectoryCaption": "CUMULATIVE CALENDAR-YEAR TRAJECTORY",
             "previousRank": 4,
             "peakRank": 4,
-            "chartTenure": "BASELINE"
+            "chartTenure": "2 EDITIONS"
           },
           {
             "id": "154345",
@@ -1772,7 +1772,7 @@
             "trajectoryCaption": "CUMULATIVE CALENDAR-YEAR TRAJECTORY",
             "previousRank": 5,
             "peakRank": 5,
-            "chartTenure": "BASELINE"
+            "chartTenure": "2 EDITIONS"
           }
         ],
         "analysis": {
@@ -1820,7 +1820,7 @@
             "trajectoryCaption": "CUMULATIVE LIFETIME TRAJECTORY",
             "previousRank": 1,
             "peakRank": 1,
-            "chartTenure": "BASELINE"
+            "chartTenure": "2 EDITIONS"
           },
           {
             "id": "4452536",
@@ -1853,7 +1853,7 @@
             "trajectoryCaption": "CUMULATIVE LIFETIME TRAJECTORY",
             "previousRank": 2,
             "peakRank": 2,
-            "chartTenure": "BASELINE"
+            "chartTenure": "2 EDITIONS"
           },
           {
             "id": "50203201",
@@ -1887,7 +1887,7 @@
             "trajectoryCaption": "CUMULATIVE LIFETIME TRAJECTORY",
             "previousRank": 3,
             "peakRank": 3,
-            "chartTenure": "BASELINE"
+            "chartTenure": "2 EDITIONS"
           },
           {
             "id": "31078",
@@ -1920,7 +1920,7 @@
             "trajectoryCaption": "CUMULATIVE LIFETIME TRAJECTORY",
             "previousRank": 4,
             "peakRank": 4,
-            "chartTenure": "BASELINE"
+            "chartTenure": "2 EDITIONS"
           },
           {
             "id": "229491",
@@ -1954,7 +1954,7 @@
             "trajectoryCaption": "CUMULATIVE LIFETIME TRAJECTORY",
             "previousRank": 5,
             "peakRank": 5,
-            "chartTenure": "BASELINE"
+            "chartTenure": "2 EDITIONS"
           }
         ],
         "analysis": {
