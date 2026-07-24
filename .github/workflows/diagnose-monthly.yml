@@ -1,0 +1,56 @@
+name: Diagnose monthly window
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/diagnose-monthly.yml'
+permissions:
+  contents: write
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compare stats.fm windows
+        env:
+          STATSFM_USER: 31c4puiblaxm3wzzwg3hfc7t75yq
+        run: |
+          python - <<'PY'
+          import json, os, urllib.parse, urllib.request
+          from datetime import datetime, timedelta
+          from zoneinfo import ZoneInfo
+          from pathlib import Path
+          API='https://api.stats.fm/api/v1'; USER=os.environ['STATSFM_USER']; TZ=ZoneInfo('America/New_York')
+          cutoff=datetime(2026,7,19,9,0,tzinfo=TZ); week=cutoff-timedelta(days=7); month=cutoff-timedelta(days=28)
+          def ms(x): return int(x.timestamp()*1000)
+          def get(path, params):
+              url=API+path+'?'+urllib.parse.urlencode(params)
+              req=urllib.request.Request(url,headers={'Accept':'application/json','User-Agent':'DantePowerRankingsDiagnostic/1.0'})
+              with urllib.request.urlopen(req,timeout=45) as r:return json.load(r)
+          def top(kind,start):
+              raw=get(f'/users/{urllib.parse.quote(USER)}/top/{kind}',{'after':ms(start),'before':ms(cutoff),'limit':10,'offset':0})
+              return raw
+          def slim(raw,kind):
+              singular={'tracks':'track','artists':'artist','albums':'album'}[kind]
+              out=[]
+              for x in raw.get('items',[]):
+                  o=x.get(singular,{})
+                  out.append({'id':o.get('id'),'name':o.get('name'),'streams':x.get('streams'),'playedMs':x.get('playedMs'),'position':x.get('position')})
+              return out
+          date_stats=get(f'/users/{urllib.parse.quote(USER)}/streams/stats/dates',{'after':ms(month),'before':ms(cutoff),'timeZone':'America/New_York'})
+          payload={'windows':{'week':[week.isoformat(),cutoff.isoformat()],'month':[month.isoformat(),cutoff.isoformat()]},'dateStats':date_stats,'categories':{}}
+          for kind in ('tracks','artists','albums'):
+              payload['categories'][kind]={'week':slim(top(kind,week),kind),'month':slim(top(kind,month),kind)}
+          Path('diagnostics').mkdir(exist_ok=True)
+          Path('diagnostics/monthly-window.json').write_text(json.dumps(payload,indent=2))
+          PY
+      - name: Commit diagnostic
+        run: |
+          git config user.name 'Spotify Power Rankings Bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add diagnostics/monthly-window.json
+          git commit -m 'Record monthly window diagnostic'
+          git push
