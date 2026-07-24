@@ -26,13 +26,19 @@ function movement(item) {
   return '<span class="move">— EVEN</span>';
 }
 
-function updateUrl() {
+function stateParams() {
   const next = new URLSearchParams({ category: state.category, period: state.period });
   if (state.period === 'custom' && state.custom.start && state.custom.end) {
     next.set('start', state.custom.start);
     next.set('end', state.custom.end);
   }
+  return next;
+}
+
+function updateNavigation() {
+  const next = stateParams();
   history.replaceState(null, '', `?${next}`);
+  $('backTop5').href = `./index.html?${next}`;
 }
 
 function renderControls() {
@@ -71,7 +77,7 @@ function renderRows(chart) {
 
 async function load(force = false) {
   renderControls();
-  updateUrl();
+  updateNavigation();
   if (state.period === 'custom' && !(state.custom.start && state.custom.end)) {
     $('top25Range').textContent = 'NO CUSTOM DATES WERE PASSED FROM THE MAIN DASHBOARD';
     renderRows(null);
