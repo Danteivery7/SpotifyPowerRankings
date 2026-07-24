@@ -1,0 +1,26 @@
+name: Check stats.fm browser access
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/check-cors.yml'
+permissions:
+  contents: write
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Capture CORS headers
+        run: |
+          mkdir -p diagnostics
+          curl -sS -D diagnostics/cors.txt -o /dev/null \
+            -H 'Origin: https://spotify-power-rankings.netlify.app' \
+            'https://api.stats.fm/api/v1/users/31c4puiblaxm3wzzwg3hfc7t75yq/top/tracks?limit=1&offset=0&after=1604203200000&before=1604289600000'
+      - name: Commit result
+        run: |
+          git config user.name 'Spotify Power Rankings Bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add diagnostics/cors.txt
+          git commit -m 'Record stats.fm CORS headers'
+          git push
