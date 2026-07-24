@@ -1,13 +1,6 @@
 name: Publish weekly power rankings
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - 'index.html'
-      - 'assets/app.js'
-      - 'scripts/publish_rankings.py'
-      - '.github/workflows/weekly-rankings.yml'
   schedule:
     - cron: '5 9 * * 0'
       timezone: 'America/New_York'
