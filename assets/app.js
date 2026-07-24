@@ -315,7 +315,7 @@ function renderCalendar({ syncInputs = true } = {}) {
   });
 }
 
-function applyTypedField(kind, { jump = true, reportIncomplete = false } = {}) {
+function applyTypedField(kind, { jump = true, reportIncomplete = false, syncInputs = true } = {}) {
   const input = kind === 'start' ? $('calendarStartInput') : $('calendarEndInput');
   const parsed = parseTypedDate(input.value);
   if (!parsed) {
@@ -338,7 +338,7 @@ function applyTypedField(kind, { jump = true, reportIncomplete = false } = {}) {
   if (kind === 'start' && state.calendar.end && parsed > state.calendar.end) state.calendar.end = '';
   if (jump) state.calendar.month = firstOfMonth(kind === 'start' ? parsed : (state.calendar.start || parsed));
   setCalendarError('');
-  renderCalendar();
+  renderCalendar({ syncInputs });
   return true;
 }
 
@@ -372,11 +372,12 @@ function initCalendar() {
   $('calendarPrev').onclick = () => { if (!$('calendarPrev').disabled) { state.calendar.month = shiftMonth(state.calendar.month, -1); renderCalendar(); } };
   $('calendarNext').onclick = () => { if (!$('calendarNext').disabled) { state.calendar.month = shiftMonth(state.calendar.month, 1); renderCalendar(); } };
   $('calendarApply').onclick = () => {
-    const startValid = applyTypedField('start', { reportIncomplete: true });
-    const endValid = applyTypedField('end', { reportIncomplete: true, jump: false });
+    const startValid = applyTypedField('start', { reportIncomplete: true, syncInputs: false });
+    const endValid = applyTypedField('end', { reportIncomplete: true, jump: false, syncInputs: false });
     if (!startValid || !endValid) return;
     const validation = calendarValidation();
     if (validation) { setCalendarError(validation); return; }
+    syncCalendarInputs();
     state.custom.start = state.calendar.start;
     state.custom.end = state.calendar.end;
     updateCustomText();
