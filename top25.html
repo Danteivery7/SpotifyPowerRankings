@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#07090d">
+<meta name="color-scheme" content="dark">
+<title>Top 25 · Dante's Spotify Power Rankings</title>
+<link rel="stylesheet" href="./assets/styles.css">
+<link rel="stylesheet" href="./assets/live-additions.css">
+</head>
+<body>
+<div class="noise" aria-hidden="true"></div>
+<div class="top25-shell">
+<header class="top25-header">
+  <div><a class="back-link" href="./index.html">← BACK TO TOP 5</a><h1 class="top25-title">THE FULL <span>TOP 25</span></h1></div>
+  <p class="top25-summary">A live detailed board pulled directly from stats.fm. Only the chart you select is loaded, and the browser briefly caches it so reloading does not trigger a Netlify build.</p>
+</header>
+<section class="top25-controls">
+  <nav class="category-tabs" aria-label="Top 25 category">
+    <button class="category active" data-category="songs"><small>01 / TRACKS</small><strong>SONGS</strong></button>
+    <button class="category" data-category="artists"><small>02 / CREATORS</small><strong>ARTISTS</strong></button>
+    <button class="category" data-category="albums"><small>03 / PROJECTS</small><strong>ALBUMS</strong></button>
+  </nav>
+  <nav class="period-tabs" aria-label="Top 25 period">
+    <button class="period" data-period="week"><small>01 / ROLLING</small><strong>7 DAYS</strong></button>
+    <button class="period" data-period="month"><small>02 / ROLLING</small><strong>1 MONTH</strong></button>
+    <button class="period" data-period="year"><small>03 / LIVE</small><strong>THIS YEAR</strong></button>
+    <button class="period" data-period="allTime"><small>04 / SINCE 2020</small><strong>ALL TIME</strong></button>
+    <button class="period" data-period="custom"><small>05 / SELECTED</small><strong>CUSTOM</strong></button>
+  </nav>
+</section>
+<div class="head">
+  <div><h2 id="top25Heading">TOP 25 SONGS · 7 DAYS</h2><div class="range" id="top25Range">LOADING LIVE RANGE</div></div>
+  <button class="refresh-btn" id="refreshTop25">REFRESH LIVE ↻</button>
+</div>
+<main class="top25-list" id="top25List"><div class="top25-loading"><span class="loader"></span>Building the selected Top 25…</div></main>
+<footer class="footer"><span>LIVE PUBLIC STATS.FM DATA · DIRECT BROWSER REQUESTS</span><span id="top25Updated">LOADING</span></footer>
+</div>
+<script type="module" src="./assets/top25.js"></script>
+</body>
+</html>
