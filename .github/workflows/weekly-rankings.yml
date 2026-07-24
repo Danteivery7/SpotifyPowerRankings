@@ -20,7 +20,9 @@ jobs:
       - name: Validate source code
         run: |
           python -m py_compile scripts/update_rankings.py scripts/publish_rankings.py
+          node --check assets/live-rankings.js
           node --check assets/app.js
+          node --check assets/top25.js
       - name: Build closed Sunday edition
         env:
           STATSFM_USER: 31c4puiblaxm3wzzwg3hfc7t75yq
