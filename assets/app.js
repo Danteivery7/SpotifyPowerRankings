@@ -19,11 +19,13 @@ const playlists = [
 ];
 const validCategories = ['songs', 'artists', 'albums'];
 const validPeriods = ['week', 'month', 'year', 'allTime', 'custom'];
+const validSortModes = ['power', 'streams', 'minutes'];
 const params = new URLSearchParams(location.search);
 
 const state = {
   category: validCategories.includes(params.get('category')) ? params.get('category') : 'songs',
   period: validPeriods.includes(params.get('period')) ? params.get('period') : 'week',
+  sortMode: validSortModes.includes(params.get('sort')) ? params.get('sort') : 'power',
   playlist: 0,
   chart: null,
   loading: false,
@@ -37,6 +39,13 @@ const esc = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&': '&a
 const initials = value => String(value || '?').split(/\s+/).slice(0, 2).map(word => word[0] || '').join('').toUpperCase();
 const categoryLabel = category => ({ songs: 'SONGS', artists: 'ARTISTS', albums: 'ALBUMS' }[category]);
 const periodLabel = period => ({ week: '7 DAYS', month: '1 MONTH', year: 'THIS YEAR', allTime: 'ALL TIME', custom: 'CUSTOM RANGE' }[period]);
+const sortModeLabel = mode => ({ power: 'POWER RANKINGS', streams: 'STREAMS', minutes: 'MINUTES LISTENED' }[mode]);
+const sortModeShort = mode => ({ power: 'POWER', streams: 'STREAMS', minutes: 'MINUTES' }[mode]);
+const sortModeCopy = mode => ({
+  power: 'The true composite ranking. Plays, listening time, consistency and momentum determine short-term Power; cumulative plays and time determine long-term Power.',
+  streams: 'Direct play-count ranking from stats.fm. Whoever has more completed streams ranks higher.',
+  minutes: 'Direct listening-time ranking from stats.fm. Whoever accumulated more listening time ranks higher.',
+}[mode]);
 
 function movement(item) {
   if (item.previousRank == null) return '<span class="move new">NEW</span>';
@@ -48,7 +57,8 @@ function movement(item) {
 
 function trendText(item) {
   const delta = Number(item.trajectoryDelta || 0);
-  return `${delta > 0 ? '+' : ''}${delta}${state.period === 'year' || state.period === 'allTime' ? ' INDEX' : '% PACE'}`;
+  const suffix = state.sortMode === 'power' && (state.period === 'year' || state.period === 'allTime') ? ' INDEX' : '% PACE';
+  return `${delta > 0 ? '+' : ''}${delta}${suffix}`;
 }
 
 function sparkPoints(values) {
@@ -70,6 +80,7 @@ function art(item, accent) {
 
 function updateUrl() {
   const next = new URLSearchParams({ category: state.category, period: state.period });
+  if (state.sortMode !== 'power') next.set('sort', state.sortMode);
   if (state.period === 'custom' && state.custom.start && state.custom.end) {
     next.set('start', state.custom.start);
     next.set('end', state.custom.end);
@@ -86,13 +97,42 @@ function renderAnalysis(chart) {
   $('closeRace').textContent = analysis.closestRace || '—';
 }
 
+function rankingDisplay(item, leader) {
+  if (state.sortMode === 'streams') {
+    return {
+      value: numberFormat(item.plays),
+      label: 'STREAMS',
+      meter: 100 * item.plays / Math.max(1, leader?.plays || item.plays || 1),
+      alternate: true,
+    };
+  }
+  if (state.sortMode === 'minutes') {
+    return {
+      value: numberFormat((item.playedMs || 0) / 60000),
+      label: 'MINUTES',
+      meter: 100 * item.playedMs / Math.max(1, leader?.playedMs || item.playedMs || 1),
+      alternate: true,
+    };
+  }
+  return {
+    value: item.powerScore == null ? '—' : Math.round(item.powerScore),
+    label: 'POWER',
+    meter: item.powerScore ?? 10,
+    alternate: false,
+  };
+}
+
 function render() {
   updateUrl();
   document.querySelectorAll('.category').forEach(button => button.classList.toggle('active', button.dataset.category === state.category));
   document.querySelectorAll('.period').forEach(button => button.classList.toggle('active', button.dataset.period === state.period));
+  document.querySelectorAll('.sort-mode').forEach(button => button.classList.toggle('active', button.dataset.sort === state.sortMode));
+  $('sortModeName').textContent = sortModeLabel(state.sortMode);
+  $('sortModeDescription').textContent = sortModeCopy(state.sortMode);
   $('customBar').hidden = state.period !== 'custom';
-  $('title').textContent = `TOP 5 ${categoryLabel(state.category)} · ${periodLabel(state.period)}`;
-  $('viewTop25').href = top25Url(state.category, state.period, state.period === 'custom' ? state.custom : null);
+  const modeSuffix = state.sortMode === 'power' ? '' : ` · BY ${sortModeShort(state.sortMode)}`;
+  $('title').textContent = `TOP 5 ${categoryLabel(state.category)} · ${periodLabel(state.period)}${modeSuffix}`;
+  $('viewTop25').href = top25Url(state.category, state.period, state.period === 'custom' ? state.custom : null, state.sortMode);
   $('viewTop25').classList.toggle('disabled', state.period === 'custom' && (!state.custom.start || !state.custom.end));
 
   if (state.loading) {
@@ -111,11 +151,16 @@ function render() {
     return;
   }
 
+  const leader = chart.items[0];
   $('board').innerHTML = chart.items.map((item, index) => {
     const accent = accents[index % accents.length];
     const subtitle = state.category === 'songs' || state.category === 'albums' ? item.artist : (item.genres?.slice(0, 2).join(' · ') || 'ARTIST');
     const points = sparkPoints(item.trajectory);
     const scope = state.period === 'week' || state.period === 'month' || state.period === 'custom' ? (item.activeDays ?? '—') : 'CUMULATIVE';
+    const display = rankingDisplay(item, leader);
+    const fourthMetric = state.sortMode === 'power'
+      ? `<div class="metric"><small>PEAK · MODE</small><strong>${item.peakRank ? `#${item.peakRank}` : '—'} · ${esc(item.chartTenure || 'LIVE')}</strong></div>`
+      : `<div class="metric"><small>RANKING MODE</small><strong>${esc(sortModeShort(state.sortMode))}</strong></div>`;
     return `<article class="card" style="--accent:${accent};animation-delay:${index * 70}ms">
       <div class="rank">${item.rank}</div>
       ${art(item, accent)}
@@ -128,12 +173,12 @@ function render() {
           <div class="metric"><small>PLAYS</small><strong>${numberFormat(item.plays)}</strong></div>
           <div class="metric"><small>LISTENING</small><strong>${durationFormat(item.playedMs)}</strong></div>
           <div class="metric"><small>${state.period === 'week' || state.period === 'month' || state.period === 'custom' ? 'ACTIVE DAYS' : 'SCOPE'}</small><strong>${scope}</strong></div>
-          <div class="metric"><small>PEAK · MODE</small><strong>${item.peakRank ? `#${item.peakRank}` : '—'} · ${esc(item.chartTenure || 'LIVE')}</strong></div>
+          ${fourthMetric}
         </div>
-        <div class="meter"><i style="width:${Math.max(5, Math.min(100, item.powerScore ?? 10))}%"></i></div>
+        <div class="meter"><i style="width:${Math.max(5, Math.min(100, display.meter))}%"></i></div>
       </div>
       <div class="score-pane">
-        <div class="score-line"><strong>${item.powerScore == null ? '—' : Math.round(item.powerScore)}</strong><small>POWER</small></div>
+        <div class="score-line${display.alternate ? ' sort-value' : ''}"><strong>${display.value}</strong><small>${display.label}</small></div>
         <svg class="spark" viewBox="0 0 205 52" preserveAspectRatio="none" aria-label="${esc(item.trajectoryCaption || 'Trajectory')}">
           <line class="sparkline-base" x1="4" x2="201" y1="47" y2="47"></line>
           <polygon points="4,52 ${points} 201,52"></polygon><polyline points="${points}"></polyline>
@@ -159,11 +204,12 @@ async function loadChart(force = false) {
       custom: state.period === 'custom' ? state.custom : null,
       force,
       trajectories: true,
+      sortMode: state.sortMode,
     });
     $('source').textContent = 'STATS.FM LIVE';
     $('updated').textContent = new Intl.DateTimeFormat('en-US', { timeZone: 'America/New_York', hour: 'numeric', minute: '2-digit', month: 'short', day: 'numeric' }).format(new Date(state.chart.refreshedAt));
   } catch (error) {
-    const fallback = state.fallback?.charts?.[state.category]?.[state.period];
+    const fallback = state.sortMode === 'power' ? state.fallback?.charts?.[state.category]?.[state.period] : null;
     state.chart = fallback?.items?.length ? { ...fallback, rangeLabel: `${fallback.rangeLabel} · SAVED FALLBACK` } : null;
     $('source').textContent = state.chart ? 'SAVED FALLBACK' : 'SOURCE ERROR';
     $('updated').textContent = state.chart ? state.fallback.updatedLabel || 'Saved edition' : 'Unavailable';
@@ -447,6 +493,13 @@ document.querySelectorAll('.category').forEach(button => {
 document.querySelectorAll('.period').forEach(button => {
   button.onclick = async () => {
     state.period = button.dataset.period;
+    await loadChart(false);
+  };
+});
+
+document.querySelectorAll('.sort-mode').forEach(button => {
+  button.onclick = async () => {
+    state.sortMode = validSortModes.includes(button.dataset.sort) ? button.dataset.sort : 'power';
     await loadChart(false);
   };
 });
