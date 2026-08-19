@@ -49,6 +49,18 @@
   <button class="period" data-period="allTime"><small>04 / SINCE 2020</small><strong>ALL TIME</strong></button>
   <button class="period" data-period="custom"><small>05 / EXPLORE</small><strong>CUSTOM</strong></button>
 </nav>
+<section class="sort-settings" aria-label="Ranking sort settings">
+  <div class="sort-settings-copy">
+    <small>SORT SETTINGS</small>
+    <strong id="sortModeName">POWER RANKINGS</strong>
+    <p id="sortModeDescription">The true composite ranking. Plays, listening time, consistency and momentum determine short-term Power; cumulative plays and time determine long-term Power.</p>
+  </div>
+  <div class="sort-mode-tabs" role="group" aria-label="Choose ranking mode">
+    <button class="sort-mode active" type="button" data-sort="power"><span>POWER</span><small>TRUE RANKING</small></button>
+    <button class="sort-mode" type="button" data-sort="streams"><span>STREAMS</span><small>PLAY COUNT</small></button>
+    <button class="sort-mode" type="button" data-sort="minutes"><span>MINUTES</span><small>TIME PLAYED</small></button>
+  </div>
+</section>
 <section class="custom-range-bar" id="customBar" hidden>
   <div><small>CUSTOM DATE RANGE</small><strong id="customRangeText">Choose a start and end date</strong></div>
   <div class="custom-actions"><button class="secondary-btn" id="openCalendar">OPEN CALENDAR</button><button class="primary-btn" id="runCustom" disabled>RUN RANGE</button></div>
