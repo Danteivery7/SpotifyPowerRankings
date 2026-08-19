@@ -2,6 +2,7 @@ export const API = 'https://api.stats.fm/api/v1';
 export const STATS_USER = '31c4puiblaxm3wzzwg3hfc7t75yq';
 export const ALL_TIME_START = '2020-11-01';
 export const CACHE_TTL_MS = 15 * 60 * 1000;
+export const SORT_MODES = ['power', 'streams', 'minutes'];
 
 export const categoryMap = {
   songs: { endpoint: 'tracks', key: 'track', singular: 'song' },
@@ -148,11 +149,19 @@ function normalizeTop(raw, category) {
   };
 }
 
-async function topItems(category, startMs, endMs, limit) {
+function orderByForMode(sortMode) {
+  if (sortMode === 'streams') return 'COUNT';
+  if (sortMode === 'minutes') return 'TIME';
+  return null;
+}
+
+async function topItems(category, startMs, endMs, limit, orderBy = null) {
   const config = categoryMap[category];
-  const payload = await apiGet(`/users/${encodeURIComponent(STATS_USER)}/top/${config.endpoint}`, {
+  const params = {
     after: String(Math.round(startMs)), before: String(Math.round(endMs)), limit: String(limit), offset: '0',
-  });
+  };
+  if (orderBy) params.orderBy = orderBy;
+  const payload = await apiGet(`/users/${encodeURIComponent(STATS_USER)}/top/${config.endpoint}`, params);
   return (payload.items || []).map(x => normalizeTop(x, category)).filter(x => x.id);
 }
 
@@ -211,8 +220,8 @@ function bucket(values, count) {
   return out;
 }
 
-function trajectoryFor(daily, period) {
-  const values = daily.map(x => x.count);
+function trajectoryFor(daily, period, sortMode = 'power') {
+  const values = daily.map(x => sortMode === 'minutes' ? x.durationMs / 60000 : x.count);
   const target = period === 'week' ? 7 : period === 'month' ? 8 : period === 'custom' ? Math.min(12, Math.max(4, Math.ceil(values.length / 7))) : 10;
   if (period === 'year' || period === 'allTime') {
     let running = 0;
@@ -257,6 +266,14 @@ function scoreShort(items) {
     .map((item, index) => ({ ...item, rank: index + 1 }));
 }
 
+function scoreMetric(items, sortMode) {
+  const primary = sortMode === 'minutes' ? 'playedMs' : 'plays';
+  const secondary = sortMode === 'minutes' ? 'plays' : 'playedMs';
+  return [...items]
+    .sort((a, b) => b[primary] - a[primary] || b[secondary] - a[secondary] || a.name.localeCompare(b.name))
+    .map((item, index) => ({ ...item, rank: index + 1 }));
+}
+
 function trajectoryDelta(values) {
   if (!values?.length) return 0;
   const first = values.find(v => v > 0) ?? 0;
@@ -264,25 +281,44 @@ function trajectoryDelta(values) {
   return Math.round(((last - first) / Math.max(1, first)) * 1000) / 10;
 }
 
-function analysis(items, category, period) {
+function analysis(items, category, period, sortMode = 'power') {
   if (!items.length) return {};
   const leader = items[0];
-  const gap = items[1] ? Math.abs(leader.powerScore - items[1].powerScore) : null;
+  const runnerUp = items[1] || null;
   const risers = items.filter(x => x.previousRank != null).map(x => ({ item: x, move: x.previousRank - x.rank })).sort((a, b) => b.move - a.move);
   const best = risers.find(x => x.move > 0);
   const scope = { week: 'rolling seven-day', month: 'rolling one-month', year: 'year-to-date', allTime: 'November 2020-to-now', custom: 'custom-range' }[period];
+
+  let gap = null;
+  let gapText = '—';
+  let leaderText = `${numberFormat(leader.plays)} plays`;
+  let modeText = 'Power Score';
+  if (sortMode === 'power') {
+    gap = runnerUp ? Math.abs(leader.powerScore - runnerUp.powerScore) : null;
+    gapText = gap == null ? '—' : `${gap.toFixed(1)} PTS`;
+  } else if (sortMode === 'streams') {
+    gap = runnerUp ? Math.max(0, leader.plays - runnerUp.plays) : null;
+    gapText = gap == null ? '—' : `${numberFormat(gap)} STREAMS`;
+    modeText = 'direct stream count';
+  } else {
+    gap = runnerUp ? Math.max(0, leader.playedMs - runnerUp.playedMs) : null;
+    gapText = gap == null ? '—' : durationFormat(gap);
+    leaderText = durationFormat(leader.playedMs);
+    modeText = 'listening time';
+  }
+
   return {
     headline: `${leader.name} controls the No. 1 position.`,
-    writeup: `${leader.name} leads the ${categoryMap[category].singular} rankings across the live ${scope} window with ${numberFormat(leader.plays)} plays.${best ? ` ${best.item.name} makes the strongest rise, gaining ${best.move} positions.` : ''}${gap == null ? '' : ` The lead is ${gap < 5 ? 'tight' : 'clear'} at ${gap.toFixed(1)} Power Score points.`}`,
+    writeup: `${leader.name} leads the ${categoryMap[category].singular} rankings across the live ${scope} window by ${modeText}, with ${leaderText}.${best ? ` ${best.item.name} makes the strongest rise, gaining ${best.move} positions.` : ''}${gap == null ? '' : ` The No. 1 margin is ${gapText.toLowerCase()}.`}`,
     leader: leader.name,
     biggestMove: best ? `${best.item.name} +${best.move}` : 'Stable board',
-    closestRace: gap == null ? '—' : `${gap.toFixed(1)} PTS`,
+    closestRace: gapText,
   };
 }
 
-function cacheKey(category, period, limit, custom) {
+function cacheKey(category, period, limit, custom, sortMode) {
   const rounded = Math.floor(Date.now() / CACHE_TTL_MS);
-  return `spr-live-v3:${STATS_USER}:${category}:${period}:${limit}:${custom?.start || ''}:${custom?.end || ''}:${rounded}`;
+  return `spr-live-v4:${STATS_USER}:${category}:${period}:${sortMode}:${limit}:${custom?.start || ''}:${custom?.end || ''}:${rounded}`;
 }
 
 function getCached(key) {
@@ -300,8 +336,9 @@ function setCached(key, value) {
   } catch { }
 }
 
-export async function buildLiveChart(category, period, { limit = 5, custom = null, force = false, trajectories = true } = {}) {
-  const key = cacheKey(category, period, limit, custom);
+export async function buildLiveChart(category, period, { limit = 5, custom = null, force = false, trajectories = true, sortMode = 'power' } = {}) {
+  const mode = SORT_MODES.includes(sortMode) ? sortMode : 'power';
+  const key = cacheKey(category, period, limit, custom, mode);
   if (!force) {
     const cached = getCached(key);
     if (cached) return cached;
@@ -309,24 +346,37 @@ export async function buildLiveChart(category, period, { limit = 5, custom = nul
 
   const window = getWindow(period, custom || {});
   const candidateLimit = Math.min(40, Math.max(limit + 7, limit === 25 ? 30 : 12));
+  const orderBy = orderByForMode(mode);
   const [currentRaw, previousRaw] = await Promise.all([
-    topItems(category, window.startMs, window.endMs, candidateLimit),
-    topItems(category, window.previousStartMs, window.previousEndMs, candidateLimit),
+    topItems(category, window.startMs, window.endMs, candidateLimit, orderBy),
+    topItems(category, window.previousStartMs, window.previousEndMs, candidateLimit, orderBy),
   ]);
 
   let ranked;
-  if (period === 'week' || period === 'month' || period === 'custom') {
-    const enriched = await mapLimit(currentRaw, 5, async item => {
-      let daily = [];
-      try { daily = await dailyRows(category, item.id, window.startMs, window.endMs); } catch { daily = []; }
-      return { ...item, daily };
-    });
-    ranked = scoreShort(enriched);
+  if (mode === 'power') {
+    if (period === 'week' || period === 'month' || period === 'custom') {
+      const enriched = await mapLimit(currentRaw, 5, async item => {
+        let daily = [];
+        try { daily = await dailyRows(category, item.id, window.startMs, window.endMs); } catch { daily = []; }
+        return { ...item, daily };
+      });
+      ranked = scoreShort(enriched);
+    } else {
+      ranked = scoreLong(currentRaw);
+    }
   } else {
-    ranked = scoreLong(currentRaw);
+    ranked = scoreMetric(currentRaw, mode);
   }
 
-  const previousRanked = (period === 'year' || period === 'allTime') ? scoreLong(previousRaw) : previousRaw.map((item, index) => ({ ...item, rank: item.sourceRank || index + 1 }));
+  let previousRanked;
+  if (mode === 'power') {
+    previousRanked = (period === 'year' || period === 'allTime')
+      ? scoreLong(previousRaw)
+      : previousRaw.map((item, index) => ({ ...item, rank: item.sourceRank || index + 1 }));
+  } else {
+    previousRanked = scoreMetric(previousRaw, mode);
+  }
+
   const previousPositions = new Map(previousRanked.map(x => [x.id, x.rank]));
   let items = ranked.slice(0, limit).map(item => ({
     ...item,
@@ -341,31 +391,44 @@ export async function buildLiveChart(category, period, { limit = 5, custom = nul
       if (!daily.length) {
         try { daily = await dailyRows(category, item.id, window.startMs, window.endMs); } catch { daily = []; }
       }
-      const trajectory = trajectoryFor(daily, period);
+      const trajectory = trajectoryFor(daily, period, mode);
+      const metricWord = mode === 'minutes' ? 'MINUTES' : 'STREAMS';
+      const baseCaption = period === 'week'
+        ? `ROLLING 7 DAYS · DAILY ${metricWord}`
+        : period === 'month'
+          ? `ROLLING MONTH · ${metricWord} CHECKPOINTS`
+          : period === 'year'
+            ? `YEAR TO DATE · ${metricWord} CHECKPOINTS`
+            : period === 'allTime'
+              ? `NOV 2020 TO NOW · ${metricWord} CHECKPOINTS`
+              : `CUSTOM RANGE · ${metricWord} CHECKPOINTS`;
       return {
         ...item,
         activeDays: daily.filter(x => x.count > 0).length,
         trajectory,
         trajectoryDelta: trajectoryDelta(trajectory),
-        trajectoryCaption: period === 'week' ? 'ROLLING 7 DAYS · DAILY' : period === 'month' ? 'ROLLING MONTH · CHECKPOINTS' : period === 'year' ? 'YEAR TO DATE · CHECKPOINTS' : period === 'allTime' ? 'NOV 2020 TO NOW · CHECKPOINTS' : 'CUSTOM RANGE · CHECKPOINTS',
+        trajectoryCaption: baseCaption,
       };
     });
   }
 
+  const modeLabel = mode === 'streams' ? 'SORTED BY STREAMS' : mode === 'minutes' ? 'SORTED BY MINUTES' : 'POWER RANKING';
   const chart = {
-    rangeLabel: `${window.label} · LIVE FROM STATS.FM`,
+    rangeLabel: `${window.label} · ${modeLabel} · LIVE FROM STATS.FM`,
     items,
-    analysis: analysis(items, category, period),
+    analysis: analysis(items, category, period, mode),
     refreshedAt: Date.now(),
     period,
     category,
+    sortMode: mode,
   };
   setCached(key, chart);
   return chart;
 }
 
-export function top25Url(category, period, custom = null) {
+export function top25Url(category, period, custom = null, sortMode = 'power') {
   const params = new URLSearchParams({ category, period });
+  if (sortMode !== 'power') params.set('sort', sortMode);
   if (custom?.start && custom?.end) {
     params.set('start', custom.start);
     params.set('end', custom.end);
