@@ -8,6 +8,7 @@
 <title>Top 25 · Dante's Spotify Power Rankings</title>
 <link rel="stylesheet" href="./assets/styles.css">
 <link rel="stylesheet" href="./assets/live-additions.css">
+<link rel="stylesheet" href="./assets/sort-modes.css">
 </head>
 <body>
 <div class="noise" aria-hidden="true"></div>
@@ -29,6 +30,18 @@
     <button class="period" data-period="allTime"><small>04 / SINCE 2020</small><strong>ALL TIME</strong></button>
     <button class="period" data-period="custom"><small>05 / SELECTED</small><strong>CUSTOM</strong></button>
   </nav>
+  <section class="sort-settings" aria-label="Top 25 ranking sort settings">
+    <div class="sort-settings-copy">
+      <small>SORT SETTINGS</small>
+      <strong id="sortModeName">POWER RANKINGS</strong>
+      <p id="sortModeDescription">The true composite Power Ranking remains the default ordering.</p>
+    </div>
+    <div class="sort-mode-tabs" role="group" aria-label="Choose Top 25 ranking mode">
+      <button class="sort-mode active" type="button" data-sort="power"><span>POWER</span><small>TRUE RANKING</small></button>
+      <button class="sort-mode" type="button" data-sort="streams"><span>STREAMS</span><small>PLAY COUNT</small></button>
+      <button class="sort-mode" type="button" data-sort="minutes"><span>MINUTES</span><small>TIME PLAYED</small></button>
+    </div>
+  </section>
 </section>
 <div class="head">
   <div><h2 id="top25Heading">TOP 25 SONGS · 7 DAYS</h2><div class="range" id="top25Range">LOADING LIVE RANGE</div></div>
