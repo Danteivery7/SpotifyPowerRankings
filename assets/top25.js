@@ -6,15 +6,23 @@ const initials = value => String(value || '?').split(/\s+/).slice(0, 2).map(word
 const accents = ['#caff4b', '#708cff', '#bb73ff', '#ffd16f', '#ff7189'];
 const validCategories = ['songs', 'artists', 'albums'];
 const validPeriods = ['week', 'month', 'year', 'allTime', 'custom'];
+const validSortModes = ['power', 'streams', 'minutes'];
 const labels = {
   category: { songs: 'SONGS', artists: 'ARTISTS', albums: 'ALBUMS' },
   period: { week: '7 DAYS', month: '1 MONTH', year: 'THIS YEAR', allTime: 'ALL TIME', custom: 'CUSTOM RANGE' },
+  sort: { power: 'POWER', streams: 'STREAMS', minutes: 'MINUTES' },
+};
+const sortCopy = {
+  power: 'The true composite Power Ranking remains the default ordering.',
+  streams: 'Direct stats.fm stream count. More completed plays means a higher rank.',
+  minutes: 'Direct stats.fm listening time. More time listened means a higher rank.',
 };
 
 const params = new URLSearchParams(location.search);
 const state = {
   category: validCategories.includes(params.get('category')) ? params.get('category') : 'songs',
   period: validPeriods.includes(params.get('period')) ? params.get('period') : 'week',
+  sortMode: validSortModes.includes(params.get('sort')) ? params.get('sort') : 'power',
   custom: { start: params.get('start') || '', end: params.get('end') || '' },
 };
 
@@ -28,6 +36,7 @@ function movement(item) {
 
 function stateParams() {
   const next = new URLSearchParams({ category: state.category, period: state.period });
+  if (state.sortMode !== 'power') next.set('sort', state.sortMode);
   if (state.period === 'custom' && state.custom.start && state.custom.end) {
     next.set('start', state.custom.start);
     next.set('end', state.custom.end);
@@ -44,13 +53,23 @@ function updateNavigation() {
 function renderControls() {
   document.querySelectorAll('.category').forEach(button => button.classList.toggle('active', button.dataset.category === state.category));
   document.querySelectorAll('.period').forEach(button => button.classList.toggle('active', button.dataset.period === state.period));
-  $('top25Heading').textContent = `TOP 25 ${labels.category[state.category]} · ${labels.period[state.period]}`;
+  document.querySelectorAll('.sort-mode').forEach(button => button.classList.toggle('active', button.dataset.sort === state.sortMode));
+  $('sortModeName').textContent = state.sortMode === 'power' ? 'POWER RANKINGS' : labels.sort[state.sortMode];
+  $('sortModeDescription').textContent = sortCopy[state.sortMode];
+  const suffix = state.sortMode === 'power' ? '' : ` · BY ${labels.sort[state.sortMode]}`;
+  $('top25Heading').textContent = `TOP 25 ${labels.category[state.category]} · ${labels.period[state.period]}${suffix}`;
 }
 
 function art(item, accent) {
   const cls = state.category === 'artists' ? 'top25-art artist-art' : 'top25-art';
   if (item.image) return `<img class="${cls}" src="${esc(item.image)}" alt="${esc(item.name)} artwork" loading="lazy">`;
   return `<div class="${cls} art-fallback" style="--accent:${accent}">${esc(initials(item.name))}</div>`;
+}
+
+function rankingValue(item) {
+  if (state.sortMode === 'streams') return { value: numberFormat(item.plays), label: 'STREAMS', alternate: true };
+  if (state.sortMode === 'minutes') return { value: numberFormat((item.playedMs || 0) / 60000), label: 'MINUTES', alternate: true };
+  return { value: Math.round(item.powerScore || 0), label: 'POWER', alternate: false };
 }
 
 function renderRows(chart) {
@@ -64,13 +83,14 @@ function renderRows(chart) {
   $('top25List').innerHTML = chart.items.map((item, index) => {
     const accent = accents[index % accents.length];
     const subtitle = state.category === 'songs' || state.category === 'albums' ? item.artist : (item.genres?.slice(0, 2).join(' · ') || 'ARTIST');
+    const display = rankingValue(item);
     return `<article class="top25-row${index < 5 ? ' featured' : ''}" style="--accent:${accent};animation-delay:${Math.min(index * 25, 350)}ms">
       <div class="top25-rank">${item.rank}</div>
       ${art(item, accent)}
       <div class="top25-name"><strong>${esc(item.name)}</strong><small>${esc(subtitle || '')}</small></div>
       <div class="top25-stat"><small>PLAYS</small><strong>${numberFormat(item.plays)}</strong></div>
       <div class="top25-stat"><small>LISTENING</small><strong>${durationFormat(item.playedMs)}</strong></div>
-      <div class="top25-power">${movement(item)}<strong>${Math.round(item.powerScore || 0)}</strong><small>POWER</small></div>
+      <div class="top25-power${display.alternate ? ' sort-value' : ''}">${movement(item)}<strong>${display.value}</strong><small>${display.label}</small></div>
     </article>`;
   }).join('');
 }
@@ -90,6 +110,7 @@ async function load(force = false) {
       custom: state.period === 'custom' ? state.custom : null,
       force,
       trajectories: false,
+      sortMode: state.sortMode,
     });
     $('top25Range').textContent = chart.rangeLabel;
     $('top25Updated').textContent = `REFRESHED ${new Intl.DateTimeFormat('en-US', { timeZone: 'America/New_York', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' }).format(new Date(chart.refreshedAt))}`;
@@ -106,6 +127,9 @@ document.querySelectorAll('.category').forEach(button => {
 });
 document.querySelectorAll('.period').forEach(button => {
   button.onclick = () => { state.period = button.dataset.period; load(false); };
+});
+document.querySelectorAll('.sort-mode').forEach(button => {
+  button.onclick = () => { state.sortMode = validSortModes.includes(button.dataset.sort) ? button.dataset.sort : 'power'; load(false); };
 });
 $('refreshTop25').onclick = () => load(true);
 load(false);
