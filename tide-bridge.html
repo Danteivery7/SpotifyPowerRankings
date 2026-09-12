@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>T.I.D.E. Music Bridge</title>
+</head>
+<body>
+<script type="module">
+import { API, STATS_USER, categoryMap, easternDateMs } from './assets/live-rankings.js';
+
+const REQUEST_TYPE = 'tide-music-request';
+const RESPONSE_TYPE = 'tide-music-response';
+
+function reply(event, payload) {
+  const targetOrigin = event.origin && event.origin !== 'null' ? event.origin : '*';
+  event.source?.postMessage(payload, targetOrigin);
+}
+
+window.addEventListener('message', async event => {
+  const message = event.data || {};
+  if (message.type !== REQUEST_TYPE || !message.requestId) return;
+
+  const { requestId, category, startDate, endDate } = message;
+  const config = categoryMap[category];
+  if (!config) {
+    reply(event, { type: RESPONSE_TYPE, requestId, ok: false, error: 'Unsupported music category.' });
+    return;
+  }
+
+  try {
+    const params = new URLSearchParams({
+      after: String(Math.round(easternDateMs(startDate))),
+      before: String(Math.round(easternDateMs(endDate, true))),
+      limit: '50',
+      offset: '0',
+      orderBy: 'COUNT',
+    });
+
+    const response = await fetch(`${API}/users/${encodeURIComponent(STATS_USER)}/top/${config.endpoint}?${params}`, {
+      headers: { Accept: 'application/json' },
+      mode: 'cors',
+    });
+    if (!response.ok) throw new Error(`stats.fm returned ${response.status}`);
+
+    const payload = await response.json();
+    reply(event, {
+      type: RESPONSE_TYPE,
+      requestId,
+      ok: true,
+      category,
+      items: payload.items || [],
+    });
+  } catch (error) {
+    reply(event, {
+      type: RESPONSE_TYPE,
+      requestId,
+      ok: false,
+      error: error?.message || 'Unable to load music data.',
+    });
+  }
+});
+
+window.parent?.postMessage({ type: 'tide-music-bridge-ready' }, '*');
+</script>
+</body>
+</html>
