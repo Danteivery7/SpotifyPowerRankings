@@ -1,0 +1,1963 @@
+{
+  "editionLabel": "Week ending Oct 25, 2026",
+  "cutoffLabel": "Oct 25, 2026 · 9:00 AM ET",
+  "updatedLabel": "Oct 25, 2026 · 1:02 PM ET",
+  "sourceStatus": "stats.fm verified",
+  "cutoffIso": "2026-10-25T09:00:00-04:00",
+  "allTimeStartIso": "2020-11-01T00:00:00-04:00",
+  "isPreview": false,
+  "charts": {
+    "songs": {
+      "week": {
+        "rangeLabel": "Oct 18, 9:00 AM — Oct 25, 9:00 AM ET",
+        "trajectoryMethod": "DAILY LISTENING · CLOSED WEEK",
+        "items": [
+          {
+            "id": "367708987",
+            "name": "Flower In A Hurricane [from GTAVI]",
+            "artist": "Justice, Tame Impala, SZA, King Gizzard & The Lizard Wizard",
+            "genres": [],
+            "image": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/c5/bf/ee/c5bfee6e-9cf9-4e02-a3c6-38a69d3e0a9e/5056556187486_cover.jpg/768x768bb.jpg",
+            "plays": 6,
+            "playedMs": 1349262,
+            "sourceRank": 1,
+            "powerScore": 93.492,
+            "activeDays": 5,
+            "trajectory": [
+              0,
+              0,
+              1,
+              2,
+              1,
+              1,
+              1
+            ],
+            "trajectoryDelta": 100.0,
+            "trajectoryCaption": "DAILY LISTENING · CLOSED WEEK",
+            "rank": 1,
+            "previousRank": null,
+            "peakRank": 1,
+            "chartTenure": "BASELINE"
+          },
+          {
+            "id": "310479266",
+            "name": "Baptized In Fear",
+            "artist": "The Weeknd",
+            "genres": [],
+            "image": "https://i.scdn.co/image/ab67616d0000b2734aa8b835e86c68b78ee147d6",
+            "plays": 4,
+            "playedMs": 584352,
+            "sourceRank": 2,
+            "powerScore": 50.805,
+            "activeDays": 1,
+            "trajectory": [
+              0,
+              0,
+              0,
+              0,
+              3,
+              0,
+              0
+            ],
+            "trajectoryDelta": 0.0,
+            "trajectoryCaption": "DAILY LISTENING · CLOSED WEEK",
+            "rank": 2,
+            "previousRank": null,
+            "peakRank": 1,
+            "chartTenure": "4 WKS"
+          },
+          {
+            "id": "32952",
+            "name": "The Hills",
+            "artist": "The Weeknd",
+            "genres": [],
+            "image": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/93/4e/0a/934e0a15-e6f3-5e26-6593-93ecf65a82cf/15UMGIM58633.rgb.jpg/768x768bb.jpg",
+            "plays": 3,
+            "playedMs": 722253,
+            "sourceRank": 3,
+            "powerScore": 47.769,
+            "activeDays": 2,
+            "trajectory": [
+              0,
+              0,
+              0,
+              2,
+              0,
+              0,
+              1
+            ],
+            "trajectoryDelta": 100.0,
+            "trajectoryCaption": "DAILY LISTENING · CLOSED WEEK",
+            "rank": 3,
+            "previousRank": null,
+            "peakRank": 2,
+            "chartTenure": "4 WKS"
+          },
+          {
+            "id": "109151",
+            "name": "The Message",
+            "artist": "Nas",
+            "genres": [],
+            "image": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/d7/6c/a6/d76ca6fc-4541-7812-875c-9db9a8b2a6d3/mzi.hfnmzkmx.jpg/768x768bb.jpg",
+            "plays": 3,
+            "playedMs": 588186,
+            "sourceRank": 4,
+            "powerScore": 45.861,
+            "activeDays": 1,
+            "trajectory": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              3
+            ],
+            "trajectoryDelta": 300.0,
+            "trajectoryCaption": "DAILY LISTENING · CLOSED WEEK",
+            "rank": 4,
+            "previousRank": null,
+            "peakRank": 4,
+            "chartTenure": "BASELINE"
+          },
+          {
+            "id": "1005998",
+            "name": "Chicago",
+            "artist": "Michael Jackson",
+            "genres": [],
+            "image": "https://i.scdn.co/image/ab67616d0000b27335f36cb686b0d5a12ab3a9f0",
+            "plays": 3,
+            "playedMs": 725565,
+            "sourceRank": 5,
+            "powerScore": 45.041,
+            "activeDays": 2,
+            "trajectory": [
+              0,
+              2,
+              0,
+              0,
+              1,
+              0,
+              0
+            ],
+            "trajectoryDelta": 0.0,
+            "trajectoryCaption": "DAILY LISTENING · CLOSED WEEK",
+            "rank": 5,
+            "previousRank": null,
+            "peakRank": 1,
+            "chartTenure": "3 WKS"
+          }
+        ],
+        "analysis": {
+          "headline": "Flower In A Hurricane [from GTAVI] controls the No. 1 position.",
+          "writeup": "Flower In A Hurricane [from GTAVI] leads the song rankings using the complete completed week scoring scope with 6 plays. The leader holds a 42.7-point margin.",
+          "leader": "Flower In A Hurricane [from GTAVI]",
+          "biggestMove": "Stable board",
+          "closestRace": "42.7 PTS"
+        }
+      },
+      "month": {
+        "rangeLabel": "Sep 27, 9:00 AM — Oct 25, 9:00 AM ET",
+        "trajectoryMethod": "FOUR COMPLETED CHART WEEKS",
+        "items": [
+          {
+            "id": "1365476",
+            "name": "Runaway",
+            "artist": "Kanye West",
+            "genres": [],
+            "image": "https://i.scdn.co/image/ab67616d0000b273090935e5030ea4d8b60bd462",
+            "plays": 7,
+            "playedMs": 3510932,
+            "sourceRank": 5,
+            "powerScore": 78.442,
+            "activeDays": 6,
+            "trajectory": [
+              0.0,
+              2.0,
+              3.0,
+              2.0
+            ],
+            "trajectoryDelta": 200.0,
+            "trajectoryCaption": "FOUR COMPLETED CHART WEEKS",
+            "rank": 1,
+            "previousRank": null,
+            "peakRank": 1,
+            "chartTenure": "2 WKS"
+          },
+          {
+            "id": "351243365",
+            "name": "GTA 6",
+            "artist": "Joyner Lucas",
+            "genres": [],
+            "image": "https://i.scdn.co/image/ab67616d0000b2739f9a62ad8c141930d99e68bf",
+            "plays": 8,
+            "playedMs": 1249086,
+            "sourceRank": 1,
+            "powerScore": 74.327,
+            "activeDays": 7,
+            "trajectory": [
+              1.0,
+              0.0,
+              3.0,
+              3.0
+            ],
+            "trajectoryDelta": 200.0,
+            "trajectoryCaption": "FOUR COMPLETED CHART WEEKS",
+            "rank": 2,
+            "previousRank": null,
+            "peakRank": 2,
+            "chartTenure": "6 WKS"
+          },
+          {
+            "id": "1005952",
+            "name": "Take My Breath",
+            "artist": "The Weeknd",
+            "genres": [],
+            "image": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/97/61/e4/9761e411-fdbe-6db1-1f84-db91b024f0d2/21UMGIM80549.rgb.jpg/768x768bb.jpg",
+            "plays": 7,
+            "playedMs": 2334138,
+            "sourceRank": 3,
+            "powerScore": 70.677,
+            "activeDays": 6,
+            "trajectory": [
+              2.0,
+              2.0,
+              2.0,
+              1.0
+            ],
+            "trajectoryDelta": -50.0,
+            "trajectoryCaption": "FOUR COMPLETED CHART WEEKS",
+            "rank": 3,
+            "previousRank": 1,
+            "peakRank": 1,
+            "chartTenure": "7 WKS"
+          },
+          {
+            "id": "1005998",
+            "name": "Chicago",
+            "artist": "Michael Jackson",
+            "genres": [],
+            "image": "https://i.scdn.co/image/ab67616d0000b27335f36cb686b0d5a12ab3a9f0",
+            "plays": 7,
+            "playedMs": 1696695,
+            "sourceRank": 4,
+            "powerScore": 68.841,
+            "activeDays": 6,
+            "trajectory": [
+              1.0,
+              2.0,
+              1.0,
+              3.0
+            ],
+            "trajectoryDelta": 200.0,
+            "trajectoryCaption": "FOUR COMPLETED CHART WEEKS",
+            "rank": 4,
+            "previousRank": 12,
+            "peakRank": 3,
+            "chartTenure": "2 WKS"
+          },
+          {
+            "id": "344035729",
+            "name": "Cha Cha Cha",
+            "artist": "Bruno Mars",
+            "genres": [],
+            "image": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/ed/46/bf/ed46bf4e-7cb9-965a-54f3-03059977fe6c/075679589293.jpg/768x768bb.jpg",
+            "plays": 7,
+            "playedMs": 1599354,
+            "sourceRank": 6,
+            "powerScore": 68.088,
+            "activeDays": 7,
+            "trajectory": [
+              0.0,
+              0.0,
+              5.0,
+              2.0
+            ],
+            "trajectoryDelta": 200.0,
+            "trajectoryCaption": "FOUR COMPLETED CHART WEEKS",
+            "rank": 5,
+            "previousRank": null,
+            "peakRank": 5,
+            "chartTenure": "BASELINE"
+          }
+        ],
+        "analysis": {
+          "headline": "Runaway controls the No. 1 position.",
+          "writeup": "Runaway leads the song rankings using the complete completed four-week period scoring scope with 7 plays. Chicago makes the strongest rise, gaining 8 positions. Take My Breath records the largest decline at 2 positions. The lead is narrow at 4.1 Power Score points.",
+          "leader": "Runaway",
+          "biggestMove": "Chicago +8",
+          "closestRace": "4.1 PTS"
+        }
+      },
+      "year": {
+        "rangeLabel": "Jan 1, 12:00 AM — Oct 25, 9:00 AM ET · COMPARED WITH PRIOR SUNDAY CUMULATIVE",
+        "trajectoryMethod": "CUMULATIVE CALENDAR-YEAR TRAJECTORY",
+        "items": [
+          {
+            "id": "32952",
+            "name": "The Hills",
+            "artist": "The Weeknd",
+            "genres": [],
+            "image": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/93/4e/0a/934e0a15-e6f3-5e26-6593-93ecf65a82cf/15UMGIM58633.rgb.jpg/768x768bb.jpg",
+            "plays": 78,
+            "playedMs": 18003084,
+            "sourceRank": 3,
+            "powerScore": 93.247,
+            "activeDays": null,
+            "rank": 1,
+            "trajectory": [
+              31.899,
+              40.715,
+              45.818,
+              53.426,
+              56.019,
+              56.019,
+              62.499,
+              80.55,
+              92.219,
+              100.0
+            ],
+            "trajectoryDelta": 7.78,
+            "trajectoryCaption": "CUMULATIVE CALENDAR-YEAR TRAJECTORY",
+            "previousRank": 3,
+            "peakRank": 1,
+            "chartTenure": "9 EDITIONS"
+          },
+          {
+            "id": "188127767",
+            "name": "We Still Don't Trust You",
+            "artist": "Future, The Weeknd, Metro Boomin",
+            "genres": [],
+            "image": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/48/55/f3/4855f346-fd74-fe8c-d75d-890b52213884/196871990844.jpg/768x768bb.jpg",
+            "plays": 78,
+            "playedMs": 17118400,
+            "sourceRank": 4,
+            "powerScore": 92.304,
+            "activeDays": null,
+            "rank": 2,
+            "trajectory": [
+              16.412,
+              29.57,
+              45.39,
+              61.073,
+              64.833,
+              64.833,
+              71.237,
+              87.455,
+              96.064,
+              100.0
+            ],
+            "trajectoryDelta": 3.94,
+            "trajectoryCaption": "CUMULATIVE CALENDAR-YEAR TRAJECTORY",
+            "previousRank": 1,
+            "peakRank": 1,
+            "chartTenure": "15 EDITIONS"
+          },
+          {
+            "id": "4075081",
+            "name": "I Love",
+            "artist": "Joyner Lucas",
+            "genres": [],
+            "image": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/3e/f6/62/3ef6628c-2baf-4a73-3c28-afe3809acaca/195081352718.jpg/768x768bb.jpg",
+            "plays": 79,
+            "playedMs": 15693264,
+            "sourceRank": 1,
+            "powerScore": 91.734,
+            "activeDays": null,
+            "rank": 3,
+            "trajectory": [
+              15.169,
+              23.87,
+              36.566,
+              55.539,
+              66.951,
+              66.951,
+              73.275,
+              91.204,
+              97.528,
+              100.0
+            ],
+            "trajectoryDelta": 2.47,
+            "trajectoryCaption": "CUMULATIVE CALENDAR-YEAR TRAJECTORY",
+            "previousRank": 2,
+            "peakRank": 1,
+            "chartTenure": "15 EDITIONS"
+          },
+          {
+            "id": "319896312",
+            "name": "Active",
+            "artist": "Big Sean, Joyner Lucas",
+            "genres": [],
+            "image": "https://i.scdn.co/image/ab67616d0000b27364012c6ce8cc33f92205dfa4",
+            "plays": 76,
+            "playedMs": 15760206,
+            "sourceRank": 6,
+            "powerScore": 88.957,
+            "activeDays": null,
+            "rank": 4,
+            "trajectory": [
+              25.301,
+              48.552,
+              64.255,
+              81.524,
+              93.373,
+              93.373,
+              96.05,
+              98.728,
+              100.0,
+              100.0
+            ],
+            "trajectoryDelta": 0.0,
+            "trajectoryCaption": "CUMULATIVE CALENDAR-YEAR TRAJECTORY",
+            "previousRank": 4,
+            "peakRank": 1,
+            "chartTenure": "15 EDITIONS"
+          },
+          {
+            "id": "351243365",
+            "name": "GTA 6",
+            "artist": "Joyner Lucas",
+            "genres": [],
+            "image": "https://i.scdn.co/image/ab67616d0000b2739f9a62ad8c141930d99e68bf",
+            "plays": 79,
+            "playedMs": 12491765,
+            "sourceRank": 2,
+            "powerScore": 88.32,
+            "activeDays": null,
+            "rank": 5,
+            "trajectory": [
+              0.0,
+              0.0,
+              14.049,
+              40.548,
+              60.618,
+              60.618,
+              70.905,
+              86.144,
+              89.905,
+              100.0
+            ],
+            "trajectoryDelta": 10.09,
+            "trajectoryCaption": "CUMULATIVE CALENDAR-YEAR TRAJECTORY",
+            "previousRank": 5,
+            "peakRank": 5,
+            "chartTenure": "2 EDITIONS"
+          }
+        ],
+        "analysis": {
+          "headline": "The Hills controls the No. 1 position.",
+          "writeup": "The Hills leads the song rankings using the complete calendar-year scoring scope with 78 plays. The Hills makes the strongest rise, gaining 2 positions. We Still Don't Trust You records the largest decline at 1 positions. The lead is narrow at 0.9 Power Score points.",
+          "leader": "The Hills",
+          "biggestMove": "The Hills +2",
+          "closestRace": "0.9 PTS"
+        }
+      },
+      "allTime": {
+        "rangeLabel": "Nov 1, 12:00 AM — Oct 25, 9:00 AM ET · COMPARED WITH PRIOR SUNDAY CUMULATIVE",
+        "trajectoryMethod": "CUMULATIVE LIFETIME TRAJECTORY",
+        "items": [
+          {
+            "id": "25656590",
+            "name": "Sacrifice",
+            "artist": "The Weeknd",
+            "genres": [],
+            "image": "https://i.scdn.co/image/ab6742d3000053b7adbdf36af31e2ccfdeca8c03",
+            "plays": 1160,
+            "playedMs": 202783123,
+            "sourceRank": 1,
+            "powerScore": 96.591,
+            "activeDays": null,
+            "rank": 1,
+            "trajectory": [
+              0.0,
+              1.135,
+              33.816,
+              64.723,
+              79.722,
+              85.517,
+              86.301,
+              93.249,
+              97.512,
+              100.0
+            ],
+            "trajectoryDelta": 2.49,
+            "trajectoryCaption": "CUMULATIVE LIFETIME TRAJECTORY",
+            "previousRank": 1,
+            "peakRank": 1,
+            "chartTenure": "15 EDITIONS"
+          },
+          {
+            "id": "555740",
+            "name": "Starboy",
+            "artist": "The Weeknd",
+            "genres": [],
+            "image": "https://i.scdn.co/image/ab67616d0000b273981de8f22f187426f261bbe7",
+            "plays": 994,
+            "playedMs": 206039230,
+            "sourceRank": 2,
+            "powerScore": 86.205,
+            "activeDays": null,
+            "rank": 2,
+            "trajectory": [
+              0.0,
+              9.007,
+              23.462,
+              40.507,
+              58.818,
+              73.002,
+              82.781,
+              89.917,
+              100.0,
+              100.0
+            ],
+            "trajectoryDelta": 0.0,
+            "trajectoryCaption": "CUMULATIVE LIFETIME TRAJECTORY",
+            "previousRank": 2,
+            "peakRank": 2,
+            "chartTenure": "15 EDITIONS"
+          },
+          {
+            "id": "350964",
+            "name": "Stronger",
+            "artist": "Kanye West",
+            "genres": [],
+            "image": "https://i.scdn.co/image/ab67616d0000b27371d296fcf1bb7db151622111",
+            "plays": 831,
+            "playedMs": 234801990,
+            "sourceRank": 4,
+            "powerScore": 78.728,
+            "activeDays": null,
+            "rank": 3,
+            "trajectory": [
+              0.0,
+              15.033,
+              38.306,
+              59.035,
+              75.523,
+              85.508,
+              89.855,
+              96.892,
+              99.165,
+              100.0
+            ],
+            "trajectoryDelta": 0.83,
+            "trajectoryCaption": "CUMULATIVE LIFETIME TRAJECTORY",
+            "previousRank": 3,
+            "peakRank": 3,
+            "chartTenure": "15 EDITIONS"
+          },
+          {
+            "id": "1005952",
+            "name": "Take My Breath",
+            "artist": "The Weeknd",
+            "genres": [],
+            "image": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/97/61/e4/9761e411-fdbe-6db1-1f84-db91b024f0d2/21UMGIM80549.rgb.jpg/768x768bb.jpg",
+            "plays": 842,
+            "playedMs": 225730965,
+            "sourceRank": 3,
+            "powerScore": 78.474,
+            "activeDays": null,
+            "rank": 4,
+            "trajectory": [
+              0.0,
+              8.877,
+              28.918,
+              49.323,
+              59.929,
+              75.127,
+              80.464,
+              90.427,
+              96.489,
+              100.0
+            ],
+            "trajectoryDelta": 3.51,
+            "trajectoryCaption": "CUMULATIVE LIFETIME TRAJECTORY",
+            "previousRank": 4,
+            "peakRank": 4,
+            "chartTenure": "15 EDITIONS"
+          },
+          {
+            "id": "1489480",
+            "name": "Ordinary Life",
+            "artist": "The Weeknd",
+            "genres": [],
+            "image": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/b5/92/bb/b592bb72-52e3-e756-9b26-9f56d08f47ab/16UMGIM67864.rgb.jpg/768x768bb.jpg",
+            "plays": 563,
+            "playedMs": 114519396,
+            "sourceRank": 5,
+            "powerScore": 48.594,
+            "activeDays": null,
+            "rank": 5,
+            "trajectory": [
+              0.0,
+              0.0,
+              0.147,
+              27.107,
+              48.37,
+              59.738,
+              61.724,
+              69.172,
+              93.17,
+              100.0
+            ],
+            "trajectoryDelta": 6.83,
+            "trajectoryCaption": "CUMULATIVE LIFETIME TRAJECTORY",
+            "previousRank": 5,
+            "peakRank": 5,
+            "chartTenure": "14 EDITIONS"
+          }
+        ],
+        "analysis": {
+          "headline": "Sacrifice controls the No. 1 position.",
+          "writeup": "Sacrifice leads the song rankings using the complete lifetime scoring scope with 1160 plays. The leader holds a 10.4-point margin.",
+          "leader": "Sacrifice",
+          "biggestMove": "Stable board",
+          "closestRace": "10.4 PTS"
+        }
+      }
+    },
+    "artists": {
+      "week": {
+        "rangeLabel": "Oct 18, 9:00 AM — Oct 25, 9:00 AM ET",
+        "trajectoryMethod": "DAILY LISTENING · CLOSED WEEK",
+        "items": [
+          {
+            "id": "11615",
+            "name": "The Weeknd",
+            "artist": "",
+            "genres": [
+              "r&b/soul"
+            ],
+            "image": "https://i.scdn.co/image/ab6761610000e5ebc1719ac9e6a75c1c25835018",
+            "plays": 33,
+            "playedMs": 7380081,
+            "sourceRank": 1,
+            "powerScore": 94.884,
+            "activeDays": 6,
+            "trajectory": [
+              0,
+              4,
+              5,
+              5,
+              8,
+              1,
+              5
+            ],
+            "trajectoryDelta": 500.0,
+            "trajectoryCaption": "DAILY LISTENING · CLOSED WEEK",
+            "rank": 1,
+            "previousRank": 1,
+            "peakRank": 1,
+            "chartTenure": "15 WKS"
+          },
+          {
+            "id": "13537",
+            "name": "Kanye West",
+            "artist": "",
+            "genres": [
+              "hip-hop/rap",
+              "rap"
+            ],
+            "image": "https://i.scdn.co/image/ab6761610000e5eb6e835a500e791bf9c27a422a",
+            "plays": 11,
+            "playedMs": 3171132,
+            "sourceRank": 2,
+            "powerScore": 41.894,
+            "activeDays": 5,
+            "trajectory": [
+              0,
+              1,
+              3,
+              1,
+              2,
+              0,
+              3
+            ],
+            "trajectoryDelta": 300.0,
+            "trajectoryCaption": "DAILY LISTENING · CLOSED WEEK",
+            "rank": 2,
+            "previousRank": 4,
+            "peakRank": 2,
+            "chartTenure": "4 WKS"
+          },
+          {
+            "id": "89493",
+            "name": "Joyner Lucas",
+            "artist": "",
+            "genres": [
+              "hip-hop/rap"
+            ],
+            "image": "https://i.scdn.co/image/ab6761610000e5ebf94c47d61b62caf79c57b091",
+            "plays": 10,
+            "playedMs": 1787721,
+            "sourceRank": 4,
+            "powerScore": 37.074,
+            "activeDays": 5,
+            "trajectory": [
+              0,
+              2,
+              2,
+              0,
+              1,
+              1,
+              3
+            ],
+            "trajectoryDelta": 300.0,
+            "trajectoryCaption": "DAILY LISTENING · CLOSED WEEK",
+            "rank": 3,
+            "previousRank": 2,
+            "peakRank": 1,
+            "chartTenure": "14 WKS"
+          },
+          {
+            "id": "22346",
+            "name": "Post Malone",
+            "artist": "",
+            "genres": [
+              "hip-hop/rap"
+            ],
+            "image": "https://i.scdn.co/image/ab6761610000e5ebe17c0aa1714a03d62b5ce4e0",
+            "plays": 10,
+            "playedMs": 1612117,
+            "sourceRank": 3,
+            "powerScore": 34.455,
+            "activeDays": 5,
+            "trajectory": [
+              0,
+              1,
+              4,
+              2,
+              1,
+              0,
+              1
+            ],
+            "trajectoryDelta": 100.0,
+            "trajectoryCaption": "DAILY LISTENING · CLOSED WEEK",
+            "rank": 4,
+            "previousRank": 3,
+            "peakRank": 2,
+            "chartTenure": "12 WKS"
+          },
+          {
+            "id": "4145",
+            "name": "Justice",
+            "artist": "",
+            "genres": [
+              "electronic",
+              "french house",
+              "new rave"
+            ],
+            "image": "https://i.scdn.co/image/ab6761610000e5ebf140c161d9f9cc9afe85b6ed",
+            "plays": 7,
+            "playedMs": 1657837,
+            "sourceRank": 5,
+            "powerScore": 30.434,
+            "activeDays": 5,
+            "trajectory": [
+              0,
+              0,
+              1,
+              3,
+              1,
+              1,
+              1
+            ],
+            "trajectoryDelta": 100.0,
+            "trajectoryCaption": "DAILY LISTENING · CLOSED WEEK",
+            "rank": 5,
+            "previousRank": null,
+            "peakRank": 5,
+            "chartTenure": "BASELINE"
+          }
+        ],
+        "analysis": {
+          "headline": "The Weeknd controls the No. 1 position.",
+          "writeup": "The Weeknd leads the artist rankings using the complete completed week scoring scope with 33 plays. Kanye West makes the strongest rise, gaining 2 positions. Joyner Lucas records the largest decline at 1 positions. The leader holds a 53.0-point margin.",
+          "leader": "The Weeknd",
+          "biggestMove": "Kanye West +2",
+          "closestRace": "53.0 PTS"
+        }
+      },
+      "month": {
+        "rangeLabel": "Sep 27, 9:00 AM — Oct 25, 9:00 AM ET",
+        "trajectoryMethod": "FOUR COMPLETED CHART WEEKS",
+        "items": [
+          {
+            "id": "11615",
+            "name": "The Weeknd",
+            "artist": "",
+            "genres": [
+              "r&b/soul"
+            ],
+            "image": "https://i.scdn.co/image/ab6761610000e5ebc1719ac9e6a75c1c25835018",
+            "plays": 111,
+            "playedMs": 25773074,
+            "sourceRank": 1,
+            "powerScore": 95.032,
+            "activeDays": 23,
+            "trajectory": [
+              14.0,
+              37.0,
+              25.0,
+              30.0
+            ],
+            "trajectoryDelta": 114.3,
+            "trajectoryCaption": "FOUR COMPLETED CHART WEEKS",
+            "rank": 1,
+            "previousRank": 1,
+            "peakRank": 1,
+            "chartTenure": "15 WKS"
+          },
+          {
+            "id": "89493",
+            "name": "Joyner Lucas",
+            "artist": "",
+            "genres": [
+              "hip-hop/rap"
+            ],
+            "image": "https://i.scdn.co/image/ab6761610000e5ebf94c47d61b62caf79c57b091",
+            "plays": 49,
+            "playedMs": 9800236,
+            "sourceRank": 2,
+            "powerScore": 47.441,
+            "activeDays": 20,
+            "trajectory": [
+              5.0,
+              14.0,
+              16.0,
+              13.0
+            ],
+            "trajectoryDelta": 160.0,
+            "trajectoryCaption": "FOUR COMPLETED CHART WEEKS",
+            "rank": 2,
+            "previousRank": 3,
+            "peakRank": 1,
+            "chartTenure": "15 WKS"
+          },
+          {
+            "id": "22346",
+            "name": "Post Malone",
+            "artist": "",
+            "genres": [
+              "hip-hop/rap"
+            ],
+            "image": "https://i.scdn.co/image/ab6761610000e5ebe17c0aa1714a03d62b5ce4e0",
+            "plays": 37,
+            "playedMs": 6508590,
+            "sourceRank": 3,
+            "powerScore": 38.074,
+            "activeDays": 19,
+            "trajectory": [
+              5.0,
+              8.0,
+              12.0,
+              11.0
+            ],
+            "trajectoryDelta": 120.0,
+            "trajectoryCaption": "FOUR COMPLETED CHART WEEKS",
+            "rank": 3,
+            "previousRank": 2,
+            "peakRank": 2,
+            "chartTenure": "14 WKS"
+          },
+          {
+            "id": "13537",
+            "name": "Kanye West",
+            "artist": "",
+            "genres": [
+              "hip-hop/rap",
+              "rap"
+            ],
+            "image": "https://i.scdn.co/image/ab6761610000e5eb6e835a500e791bf9c27a422a",
+            "plays": 26,
+            "playedMs": 7970561,
+            "sourceRank": 4,
+            "powerScore": 31.608,
+            "activeDays": 15,
+            "trajectory": [
+              2.0,
+              6.0,
+              7.0,
+              10.0
+            ],
+            "trajectoryDelta": 400.0,
+            "trajectoryCaption": "FOUR COMPLETED CHART WEEKS",
+            "rank": 4,
+            "previousRank": 5,
+            "peakRank": 4,
+            "chartTenure": "5 WKS"
+          },
+          {
+            "id": "2148",
+            "name": "T.I.",
+            "artist": "",
+            "genres": [
+              "hip-hop/rap",
+              "southern hip hop"
+            ],
+            "image": "https://i.scdn.co/image/ab6761610000e5eb12057d342f33c61b3768f2bc",
+            "plays": 22,
+            "playedMs": 4935934,
+            "sourceRank": 5,
+            "powerScore": 26.637,
+            "activeDays": 16,
+            "trajectory": [
+              4.0,
+              6.0,
+              7.0,
+              5.0
+            ],
+            "trajectoryDelta": 25.0,
+            "trajectoryCaption": "FOUR COMPLETED CHART WEEKS",
+            "rank": 5,
+            "previousRank": 6,
+            "peakRank": 4,
+            "chartTenure": "10 WKS"
+          }
+        ],
+        "analysis": {
+          "headline": "The Weeknd controls the No. 1 position.",
+          "writeup": "The Weeknd leads the artist rankings using the complete completed four-week period scoring scope with 111 plays. Joyner Lucas makes the strongest rise, gaining 1 positions. Post Malone records the largest decline at 1 positions. The leader holds a 47.6-point margin.",
+          "leader": "The Weeknd",
+          "biggestMove": "Joyner Lucas +1",
+          "closestRace": "47.6 PTS"
+        }
+      },
+      "year": {
+        "rangeLabel": "Jan 1, 12:00 AM — Oct 25, 9:00 AM ET · COMPARED WITH PRIOR SUNDAY CUMULATIVE",
+        "trajectoryMethod": "CUMULATIVE CALENDAR-YEAR TRAJECTORY",
+        "items": [
+          {
+            "id": "11615",
+            "name": "The Weeknd",
+            "artist": "",
+            "genres": [
+              "r&b/soul"
+            ],
+            "image": "https://i.scdn.co/image/ab6761610000e5ebc1719ac9e6a75c1c25835018",
+            "plays": 1876,
+            "playedMs": 408523045,
+            "sourceRank": 1,
+            "powerScore": 100.0,
+            "activeDays": null,
+            "rank": 1,
+            "trajectory": [
+              21.549,
+              34.94,
+              45.242,
+              54.734,
+              58.415,
+              58.415,
+              63.618,
+              78.434,
+              93.462,
+              100.0
+            ],
+            "trajectoryDelta": 6.54,
+            "trajectoryCaption": "CUMULATIVE CALENDAR-YEAR TRAJECTORY",
+            "previousRank": 1,
+            "peakRank": 1,
+            "chartTenure": "15 EDITIONS"
+          },
+          {
+            "id": "89493",
+            "name": "Joyner Lucas",
+            "artist": "",
+            "genres": [
+              "hip-hop/rap"
+            ],
+            "image": "https://i.scdn.co/image/ab6761610000e5ebf94c47d61b62caf79c57b091",
+            "plays": 845,
+            "playedMs": 168108182,
+            "sourceRank": 2,
+            "powerScore": 44.07,
+            "activeDays": null,
+            "rank": 2,
+            "trajectory": [
+              13.223,
+              27.212,
+              40.626,
+              54.667,
+              69.798,
+              69.798,
+              77.415,
+              89.57,
+              94.078,
+              100.0
+            ],
+            "trajectoryDelta": 5.92,
+            "trajectoryCaption": "CUMULATIVE CALENDAR-YEAR TRAJECTORY",
+            "previousRank": 2,
+            "peakRank": 2,
+            "chartTenure": "15 EDITIONS"
+          },
+          {
+            "id": "27031",
+            "name": "J. Cole",
+            "artist": "",
+            "genres": [
+              "rap",
+              "hip-hop/rap"
+            ],
+            "image": "https://i.scdn.co/image/ab6761610000e5ebc401ea77e86ee984b1ba9fc2",
+            "plays": 366,
+            "playedMs": 80948175,
+            "sourceRank": 3,
+            "powerScore": 19.586,
+            "activeDays": null,
+            "rank": 3,
+            "trajectory": [
+              13.485,
+              37.807,
+              52.552,
+              66.899,
+              72.545,
+              72.545,
+              78.083,
+              90.897,
+              95.623,
+              100.0
+            ],
+            "trajectoryDelta": 4.38,
+            "trajectoryCaption": "CUMULATIVE CALENDAR-YEAR TRAJECTORY",
+            "previousRank": 3,
+            "peakRank": 3,
+            "chartTenure": "15 EDITIONS"
+          },
+          {
+            "id": "13537",
+            "name": "Kanye West",
+            "artist": "",
+            "genres": [
+              "hip-hop/rap",
+              "rap"
+            ],
+            "image": "https://i.scdn.co/image/ab6761610000e5eb6e835a500e791bf9c27a422a",
+            "plays": 319,
+            "playedMs": 78216994,
+            "sourceRank": 5,
+            "powerScore": 17.54,
+            "activeDays": null,
+            "rank": 4,
+            "trajectory": [
+              25.051,
+              38.355,
+              56.722,
+              68.215,
+              72.081,
+              72.081,
+              77.81,
+              84.361,
+              91.066,
+              100.0
+            ],
+            "trajectoryDelta": 8.93,
+            "trajectoryCaption": "CUMULATIVE CALENDAR-YEAR TRAJECTORY",
+            "previousRank": 6,
+            "peakRank": 4,
+            "chartTenure": "14 EDITIONS"
+          },
+          {
+            "id": "22346",
+            "name": "Post Malone",
+            "artist": "",
+            "genres": [
+              "hip-hop/rap"
+            ],
+            "image": "https://i.scdn.co/image/ab6761610000e5ebe17c0aa1714a03d62b5ce4e0",
+            "plays": 342,
+            "playedMs": 61698436,
+            "sourceRank": 4,
+            "powerScore": 17.448,
+            "activeDays": null,
+            "rank": 5,
+            "trajectory": [
+              9.411,
+              22.033,
+              32.199,
+              39.84,
+              47.593,
+              47.593,
+              55.583,
+              76.367,
+              88.956,
+              100.0
+            ],
+            "trajectoryDelta": 11.04,
+            "trajectoryCaption": "CUMULATIVE CALENDAR-YEAR TRAJECTORY",
+            "previousRank": 5,
+            "peakRank": 5,
+            "chartTenure": "2 EDITIONS"
+          }
+        ],
+        "analysis": {
+          "headline": "The Weeknd controls the No. 1 position.",
+          "writeup": "The Weeknd leads the artist rankings using the complete calendar-year scoring scope with 1876 plays. Kanye West makes the strongest rise, gaining 2 positions. The leader holds a 55.9-point margin.",
+          "leader": "The Weeknd",
+          "biggestMove": "Kanye West +2",
+          "closestRace": "55.9 PTS"
+        }
+      },
+      "allTime": {
+        "rangeLabel": "Nov 1, 12:00 AM — Oct 25, 9:00 AM ET · COMPARED WITH PRIOR SUNDAY CUMULATIVE",
+        "trajectoryMethod": "CUMULATIVE LIFETIME TRAJECTORY",
+        "items": [
+          {
+            "id": "11615",
+            "name": "The Weeknd",
+            "artist": "",
+            "genres": [
+              "r&b/soul"
+            ],
+            "image": "https://i.scdn.co/image/ab6761610000e5ebc1719ac9e6a75c1c25835018",
+            "plays": 17986,
+            "playedMs": 3753504964,
+            "sourceRank": 1,
+            "powerScore": 100.0,
+            "activeDays": null,
+            "rank": 1,
+            "trajectory": [
+              0.0,
+              5.377,
+              18.996,
+              39.842,
+              50.285,
+              59.514,
+              62.272,
+              80.36,
+              93.97,
+              100.0
+            ],
+            "trajectoryDelta": 6.03,
+            "trajectoryCaption": "CUMULATIVE LIFETIME TRAJECTORY",
+            "previousRank": 1,
+            "peakRank": 1,
+            "chartTenure": "15 EDITIONS"
+          },
+          {
+            "id": "13537",
+            "name": "Kanye West",
+            "artist": "",
+            "genres": [
+              "hip-hop/rap",
+              "rap"
+            ],
+            "image": "https://i.scdn.co/image/ab6761610000e5eb6e835a500e791bf9c27a422a",
+            "plays": 6936,
+            "playedMs": 1642904803,
+            "sourceRank": 2,
+            "powerScore": 39.865,
+            "activeDays": null,
+            "rank": 2,
+            "trajectory": [
+              0.0,
+              9.333,
+              29.024,
+              45.737,
+              68.634,
+              77.775,
+              81.906,
+              89.88,
+              97.771,
+              100.0
+            ],
+            "trajectoryDelta": 2.23,
+            "trajectoryCaption": "CUMULATIVE LIFETIME TRAJECTORY",
+            "previousRank": 2,
+            "peakRank": 2,
+            "chartTenure": "15 EDITIONS"
+          },
+          {
+            "id": "27031",
+            "name": "J. Cole",
+            "artist": "",
+            "genres": [
+              "rap",
+              "hip-hop/rap"
+            ],
+            "image": "https://i.scdn.co/image/ab6761610000e5ebc401ea77e86ee984b1ba9fc2",
+            "plays": 3321,
+            "playedMs": 712885862,
+            "sourceRank": 3,
+            "powerScore": 18.596,
+            "activeDays": null,
+            "rank": 3,
+            "trajectory": [
+              0.0,
+              28.362,
+              50.066,
+              61.272,
+              68.542,
+              75.896,
+              78.763,
+              84.733,
+              94.398,
+              100.0
+            ],
+            "trajectoryDelta": 5.6,
+            "trajectoryCaption": "CUMULATIVE LIFETIME TRAJECTORY",
+            "previousRank": 3,
+            "peakRank": 3,
+            "chartTenure": "15 EDITIONS"
+          },
+          {
+            "id": "2148",
+            "name": "T.I.",
+            "artist": "",
+            "genres": [
+              "hip-hop/rap",
+              "southern hip hop"
+            ],
+            "image": "https://i.scdn.co/image/ab6761610000e5eb12057d342f33c61b3768f2bc",
+            "plays": 2671,
+            "playedMs": 666470911,
+            "sourceRank": 4,
+            "powerScore": 15.577,
+            "activeDays": null,
+            "rank": 4,
+            "trajectory": [
+              0.0,
+              0.0,
+              0.112,
+              3.53,
+              50.268,
+              55.644,
+              70.224,
+              85.497,
+              95.35,
+              100.0
+            ],
+            "trajectoryDelta": 4.65,
+            "trajectoryCaption": "CUMULATIVE LIFETIME TRAJECTORY",
+            "previousRank": 4,
+            "peakRank": 4,
+            "chartTenure": "15 EDITIONS"
+          },
+          {
+            "id": "22346",
+            "name": "Post Malone",
+            "artist": "",
+            "genres": [
+              "hip-hop/rap"
+            ],
+            "image": "https://i.scdn.co/image/ab6761610000e5ebe17c0aa1714a03d62b5ce4e0",
+            "plays": 2498,
+            "playedMs": 481276509,
+            "sourceRank": 5,
+            "powerScore": 13.622,
+            "activeDays": null,
+            "rank": 5,
+            "trajectory": [
+              0.0,
+              0.468,
+              3.301,
+              4.746,
+              8.857,
+              25.92,
+              28.896,
+              63.868,
+              90.585,
+              100.0
+            ],
+            "trajectoryDelta": 9.42,
+            "trajectoryCaption": "CUMULATIVE LIFETIME TRAJECTORY",
+            "previousRank": 5,
+            "peakRank": 5,
+            "chartTenure": "15 EDITIONS"
+          }
+        ],
+        "analysis": {
+          "headline": "The Weeknd controls the No. 1 position.",
+          "writeup": "The Weeknd leads the artist rankings using the complete lifetime scoring scope with 17986 plays. The leader holds a 60.1-point margin.",
+          "leader": "The Weeknd",
+          "biggestMove": "Stable board",
+          "closestRace": "60.1 PTS"
+        }
+      }
+    },
+    "albums": {
+      "week": {
+        "rangeLabel": "Oct 18, 9:00 AM — Oct 25, 9:00 AM ET",
+        "trajectoryMethod": "DAILY LISTENING · CLOSED WEEK",
+        "items": [
+          {
+            "id": "50203201",
+            "name": "Hurry Up Tomorrow",
+            "artist": "The Weeknd",
+            "genres": [
+              "R&B/Soul",
+              "Música",
+              "Music"
+            ],
+            "image": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/49/9b/6e/499b6e2d-648f-1a4e-31b8-fb7f06a8123c/25UMGIM09490.rgb.jpg/768x768bb.jpg",
+            "plays": 17,
+            "playedMs": 3546214,
+            "sourceRank": 1,
+            "powerScore": 91.576,
+            "activeDays": 5,
+            "trajectory": [
+              0,
+              2,
+              2,
+              1,
+              7,
+              1,
+              0
+            ],
+            "trajectoryDelta": 0.0,
+            "trajectoryCaption": "DAILY LISTENING · CLOSED WEEK",
+            "rank": 1,
+            "previousRank": 2,
+            "peakRank": 1,
+            "chartTenure": "14 WKS"
+          },
+          {
+            "id": "49360",
+            "name": "Hollywood's Bleeding",
+            "artist": "Post Malone",
+            "genres": [
+              "Hip-Hop/Rap",
+              "Music"
+            ],
+            "image": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/6c/13/27/6c13279a-399b-2631-3cb2-6233a91d7a53/19UMGIM78325.rgb.jpg/768x768bb.jpg",
+            "plays": 6,
+            "playedMs": 882412,
+            "sourceRank": 2,
+            "powerScore": 32.582,
+            "activeDays": 3,
+            "trajectory": [
+              0,
+              1,
+              4,
+              0,
+              1,
+              0,
+              0
+            ],
+            "trajectoryDelta": 0.0,
+            "trajectoryCaption": "DAILY LISTENING · CLOSED WEEK",
+            "rank": 2,
+            "previousRank": 3,
+            "peakRank": 2,
+            "chartTenure": "10 WKS"
+          },
+          {
+            "id": "138098",
+            "name": "My Beautiful Dark Twisted Fantasy",
+            "artist": "Kanye West",
+            "genres": [
+              "Hip-Hop/Rap",
+              "Music",
+              "Rap",
+              "Hardcore Rap",
+              "Rock"
+            ],
+            "image": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/0a/0b/31/0a0b31cc-077c-31bf-e7fe-612191774948/10UMGIM30072.rgb.jpg/768x768bb.jpg",
+            "plays": 4,
+            "playedMs": 1327733,
+            "sourceRank": 4,
+            "powerScore": 32.45,
+            "activeDays": 4,
+            "trajectory": [
+              0,
+              1,
+              1,
+              0,
+              1,
+              0,
+              1
+            ],
+            "trajectoryDelta": 100.0,
+            "trajectoryCaption": "DAILY LISTENING · CLOSED WEEK",
+            "rank": 3,
+            "previousRank": 6,
+            "peakRank": 3,
+            "chartTenure": "BASELINE"
+          },
+          {
+            "id": "138152",
+            "name": "ADHD",
+            "artist": "Joyner Lucas",
+            "genres": [
+              "Rap",
+              "Music",
+              "Hip-Hop/Rap"
+            ],
+            "image": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/3e/f6/62/3ef6628c-2baf-4a73-3c28-afe3809acaca/195081352718.jpg/768x768bb.jpg",
+            "plays": 4,
+            "playedMs": 788187,
+            "sourceRank": 5,
+            "powerScore": 28.563,
+            "activeDays": 3,
+            "trajectory": [
+              0,
+              0,
+              1,
+              0,
+              1,
+              0,
+              2
+            ],
+            "trajectoryDelta": 200.0,
+            "trajectoryCaption": "DAILY LISTENING · CLOSED WEEK",
+            "rank": 4,
+            "previousRank": 4,
+            "peakRank": 2,
+            "chartTenure": "8 WKS"
+          },
+          {
+            "id": "100332",
+            "name": "XSCAPE",
+            "artist": "Michael Jackson",
+            "genres": [],
+            "image": "https://i.scdn.co/image/ab67616d0000b27335f36cb686b0d5a12ab3a9f0",
+            "plays": 4,
+            "playedMs": 981058,
+            "sourceRank": 3,
+            "powerScore": 26.079,
+            "activeDays": 3,
+            "trajectory": [
+              0,
+              2,
+              0,
+              1,
+              1,
+              0,
+              0
+            ],
+            "trajectoryDelta": 0.0,
+            "trajectoryCaption": "DAILY LISTENING · CLOSED WEEK",
+            "rank": 5,
+            "previousRank": null,
+            "peakRank": 4,
+            "chartTenure": "2 WKS"
+          }
+        ],
+        "analysis": {
+          "headline": "Hurry Up Tomorrow controls the No. 1 position.",
+          "writeup": "Hurry Up Tomorrow leads the album rankings using the complete completed week scoring scope with 17 plays. My Beautiful Dark Twisted Fantasy makes the strongest rise, gaining 3 positions. The leader holds a 59.0-point margin.",
+          "leader": "Hurry Up Tomorrow",
+          "biggestMove": "My Beautiful Dark Twisted Fantasy +3",
+          "closestRace": "59.0 PTS"
+        }
+      },
+      "month": {
+        "rangeLabel": "Sep 27, 9:00 AM — Oct 25, 9:00 AM ET",
+        "trajectoryMethod": "FOUR COMPLETED CHART WEEKS",
+        "items": [
+          {
+            "id": "50203201",
+            "name": "Hurry Up Tomorrow",
+            "artist": "The Weeknd",
+            "genres": [
+              "R&B/Soul",
+              "Música",
+              "Music"
+            ],
+            "image": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/49/9b/6e/499b6e2d-648f-1a4e-31b8-fb7f06a8123c/25UMGIM09490.rgb.jpg/768x768bb.jpg",
+            "plays": 43,
+            "playedMs": 10117096,
+            "sourceRank": 1,
+            "powerScore": 93.313,
+            "activeDays": 19,
+            "trajectory": [
+              8.0,
+              11.0,
+              6.0,
+              14.0
+            ],
+            "trajectoryDelta": 75.0,
+            "trajectoryCaption": "FOUR COMPLETED CHART WEEKS",
+            "rank": 1,
+            "previousRank": 2,
+            "peakRank": 1,
+            "chartTenure": "14 WKS"
+          },
+          {
+            "id": "4452536",
+            "name": "Dawn FM",
+            "artist": "The Weeknd",
+            "genres": [
+              "R&B/Soul",
+              "Music"
+            ],
+            "image": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/92/14/e3/9214e352-3322-3708-4903-cf5059c4985f/21UM1IM58861.rgb.jpg/768x768bb.jpg",
+            "plays": 24,
+            "playedMs": 5556344,
+            "sourceRank": 2,
+            "powerScore": 51.437,
+            "activeDays": 11,
+            "trajectory": [
+              4.0,
+              10.0,
+              8.0,
+              2.0
+            ],
+            "trajectoryDelta": -50.0,
+            "trajectoryCaption": "FOUR COMPLETED CHART WEEKS",
+            "rank": 2,
+            "previousRank": 1,
+            "peakRank": 1,
+            "chartTenure": "7 WKS"
+          },
+          {
+            "id": "49360",
+            "name": "Hollywood's Bleeding",
+            "artist": "Post Malone",
+            "genres": [
+              "Hip-Hop/Rap",
+              "Music"
+            ],
+            "image": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/6c/13/27/6c13279a-399b-2631-3cb2-6233a91d7a53/19UMGIM78325.rgb.jpg/768x768bb.jpg",
+            "plays": 20,
+            "playedMs": 3264235,
+            "sourceRank": 3,
+            "powerScore": 43.877,
+            "activeDays": 12,
+            "trajectory": [
+              5.0,
+              2.0,
+              6.0,
+              7.0
+            ],
+            "trajectoryDelta": 40.0,
+            "trajectoryCaption": "FOUR COMPLETED CHART WEEKS",
+            "rank": 3,
+            "previousRank": 4,
+            "peakRank": 2,
+            "chartTenure": "12 WKS"
+          },
+          {
+            "id": "138152",
+            "name": "ADHD",
+            "artist": "Joyner Lucas",
+            "genres": [
+              "Rap",
+              "Music",
+              "Hip-Hop/Rap"
+            ],
+            "image": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/3e/f6/62/3ef6628c-2baf-4a73-3c28-afe3809acaca/195081352718.jpg/768x768bb.jpg",
+            "plays": 15,
+            "playedMs": 3327717,
+            "sourceRank": 4,
+            "powerScore": 36.937,
+            "activeDays": 12,
+            "trajectory": [
+              0.0,
+              5.0,
+              5.0,
+              5.0
+            ],
+            "trajectoryDelta": 500.0,
+            "trajectoryCaption": "FOUR COMPLETED CHART WEEKS",
+            "rank": 4,
+            "previousRank": 9,
+            "peakRank": 2,
+            "chartTenure": "7 WKS"
+          },
+          {
+            "id": "138098",
+            "name": "My Beautiful Dark Twisted Fantasy",
+            "artist": "Kanye West",
+            "genres": [
+              "Hip-Hop/Rap",
+              "Music",
+              "Rap",
+              "Hardcore Rap",
+              "Rock"
+            ],
+            "image": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/0a/0b/31/0a0b31cc-077c-31bf-e7fe-612191774948/10UMGIM30072.rgb.jpg/768x768bb.jpg",
+            "plays": 9,
+            "playedMs": 3810932,
+            "sourceRank": 6,
+            "powerScore": 27.907,
+            "activeDays": 8,
+            "trajectory": [
+              0.0,
+              2.0,
+              3.0,
+              4.0
+            ],
+            "trajectoryDelta": 400.0,
+            "trajectoryCaption": "FOUR COMPLETED CHART WEEKS",
+            "rank": 5,
+            "previousRank": null,
+            "peakRank": 5,
+            "chartTenure": "BASELINE"
+          }
+        ],
+        "analysis": {
+          "headline": "Hurry Up Tomorrow controls the No. 1 position.",
+          "writeup": "Hurry Up Tomorrow leads the album rankings using the complete completed four-week period scoring scope with 43 plays. ADHD makes the strongest rise, gaining 5 positions. Dawn FM records the largest decline at 1 positions. The leader holds a 41.9-point margin.",
+          "leader": "Hurry Up Tomorrow",
+          "biggestMove": "ADHD +5",
+          "closestRace": "41.9 PTS"
+        }
+      },
+      "year": {
+        "rangeLabel": "Jan 1, 12:00 AM — Oct 25, 9:00 AM ET · COMPARED WITH PRIOR SUNDAY CUMULATIVE",
+        "trajectoryMethod": "CUMULATIVE CALENDAR-YEAR TRAJECTORY",
+        "items": [
+          {
+            "id": "50203201",
+            "name": "Hurry Up Tomorrow",
+            "artist": "The Weeknd",
+            "genres": [
+              "R&B/Soul",
+              "Música",
+              "Music"
+            ],
+            "image": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/49/9b/6e/499b6e2d-648f-1a4e-31b8-fb7f06a8123c/25UMGIM09490.rgb.jpg/768x768bb.jpg",
+            "plays": 489,
+            "playedMs": 108809734,
+            "sourceRank": 1,
+            "powerScore": 100.0,
+            "activeDays": null,
+            "rank": 1,
+            "trajectory": [
+              10.028,
+              21.093,
+              29.58,
+              37.282,
+              40.74,
+              40.74,
+              46.176,
+              73.154,
+              90.905,
+              100.0
+            ],
+            "trajectoryDelta": 9.09,
+            "trajectoryCaption": "CUMULATIVE CALENDAR-YEAR TRAJECTORY",
+            "previousRank": 1,
+            "peakRank": 1,
+            "chartTenure": "15 EDITIONS"
+          },
+          {
+            "id": "229491",
+            "name": "After Hours",
+            "artist": "The Weeknd",
+            "genres": [
+              "R&B/Soul",
+              "Music",
+              "Contemporary R&B"
+            ],
+            "image": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/03/e1/67/03e167d6-ee05-eb32-55e9-c5040f55a8bf/20UMGIM21166.rgb.jpg/768x768bb.jpg",
+            "plays": 303,
+            "playedMs": 64477778,
+            "sourceRank": 2,
+            "powerScore": 61.287,
+            "activeDays": null,
+            "rank": 2,
+            "trajectory": [
+              28.943,
+              40.316,
+              50.517,
+              62.897,
+              67.304,
+              67.304,
+              72.593,
+              83.168,
+              97.697,
+              100.0
+            ],
+            "trajectoryDelta": 2.3,
+            "trajectoryCaption": "CUMULATIVE CALENDAR-YEAR TRAJECTORY",
+            "previousRank": 2,
+            "peakRank": 2,
+            "chartTenure": "15 EDITIONS"
+          },
+          {
+            "id": "138152",
+            "name": "ADHD",
+            "artist": "Joyner Lucas",
+            "genres": [
+              "Rap",
+              "Music",
+              "Hip-Hop/Rap"
+            ],
+            "image": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/3e/f6/62/3ef6628c-2baf-4a73-3c28-afe3809acaca/195081352718.jpg/768x768bb.jpg",
+            "plays": 268,
+            "playedMs": 56605949,
+            "sourceRank": 3,
+            "powerScore": 54.11,
+            "activeDays": null,
+            "rank": 3,
+            "trajectory": [
+              15.636,
+              26.477,
+              42.947,
+              58.916,
+              71.3,
+              71.3,
+              76.178,
+              90.242,
+              93.973,
+              100.0
+            ],
+            "trajectoryDelta": 6.03,
+            "trajectoryCaption": "CUMULATIVE CALENDAR-YEAR TRAJECTORY",
+            "previousRank": 3,
+            "peakRank": 3,
+            "chartTenure": "15 EDITIONS"
+          },
+          {
+            "id": "56664932",
+            "name": "ADHD 2",
+            "artist": "Joyner Lucas",
+            "genres": [
+              "Hip-Hop",
+              "Music",
+              "Hip-Hop/Rap"
+            ],
+            "image": "https://i.scdn.co/image/ab67616d0000b2731e7e1418fe2a00bc783fa80a",
+            "plays": 261,
+            "playedMs": 49840083,
+            "sourceRank": 4,
+            "powerScore": 51.482,
+            "activeDays": null,
+            "rank": 4,
+            "trajectory": [
+              19.893,
+              36.425,
+              48.713,
+              59.488,
+              78.005,
+              78.005,
+              84.134,
+              93.191,
+              97.346,
+              100.0
+            ],
+            "trajectoryDelta": 2.65,
+            "trajectoryCaption": "CUMULATIVE CALENDAR-YEAR TRAJECTORY",
+            "previousRank": 4,
+            "peakRank": 1,
+            "chartTenure": "15 EDITIONS"
+          },
+          {
+            "id": "63890920",
+            "name": "The Fall-Off",
+            "artist": "J. Cole",
+            "genres": [
+              "Hip-Hop/Rap",
+              "Music"
+            ],
+            "image": "https://i.scdn.co/image/ab67616d0000b273adf228039af060f4bd880536",
+            "plays": 204,
+            "playedMs": 45640012,
+            "sourceRank": 5,
+            "powerScore": 41.775,
+            "activeDays": null,
+            "rank": 5,
+            "trajectory": [
+              0.0,
+              31.252,
+              45.342,
+              60.509,
+              64.863,
+              64.863,
+              73.326,
+              90.008,
+              95.523,
+              100.0
+            ],
+            "trajectoryDelta": 4.48,
+            "trajectoryCaption": "CUMULATIVE CALENDAR-YEAR TRAJECTORY",
+            "previousRank": 5,
+            "peakRank": 5,
+            "chartTenure": "11 EDITIONS"
+          }
+        ],
+        "analysis": {
+          "headline": "Hurry Up Tomorrow controls the No. 1 position.",
+          "writeup": "Hurry Up Tomorrow leads the album rankings using the complete calendar-year scoring scope with 489 plays. The leader holds a 38.7-point margin.",
+          "leader": "Hurry Up Tomorrow",
+          "biggestMove": "Stable board",
+          "closestRace": "38.7 PTS"
+        }
+      },
+      "allTime": {
+        "rangeLabel": "Nov 1, 12:00 AM — Oct 25, 9:00 AM ET · COMPARED WITH PRIOR SUNDAY CUMULATIVE",
+        "trajectoryMethod": "CUMULATIVE LIFETIME TRAJECTORY",
+        "items": [
+          {
+            "id": "154345",
+            "name": "Starboy",
+            "artist": "",
+            "genres": [
+              "R&B/Soul",
+              "Music",
+              "Dance",
+              "Electronic"
+            ],
+            "image": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/b5/92/bb/b592bb72-52e3-e756-9b26-9f56d08f47ab/16UMGIM67864.rgb.jpg/768x768bb.jpg",
+            "plays": 4224,
+            "playedMs": 856490161,
+            "sourceRank": 1,
+            "powerScore": 100.0,
+            "activeDays": null,
+            "rank": 1,
+            "trajectory": [
+              0.0,
+              8.595,
+              23.658,
+              56.014,
+              71.557,
+              81.488,
+              84.836,
+              90.26,
+              99.335,
+              100.0
+            ],
+            "trajectoryDelta": 0.67,
+            "trajectoryCaption": "CUMULATIVE LIFETIME TRAJECTORY",
+            "previousRank": 1,
+            "peakRank": 1,
+            "chartTenure": "15 EDITIONS"
+          },
+          {
+            "id": "4452536",
+            "name": "Dawn FM",
+            "artist": "The Weeknd",
+            "genres": [
+              "R&B/Soul",
+              "Music"
+            ],
+            "image": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/92/14/e3/9214e352-3322-3708-4903-cf5059c4985f/21UM1IM58861.rgb.jpg/768x768bb.jpg",
+            "plays": 3987,
+            "playedMs": 769761883,
+            "sourceRank": 2,
+            "powerScore": 93.26,
+            "activeDays": null,
+            "rank": 2,
+            "trajectory": [
+              0.0,
+              1.132,
+              30.834,
+              66.236,
+              77.46,
+              85.295,
+              86.735,
+              92.716,
+              96.402,
+              100.0
+            ],
+            "trajectoryDelta": 3.6,
+            "trajectoryCaption": "CUMULATIVE LIFETIME TRAJECTORY",
+            "previousRank": 2,
+            "peakRank": 2,
+            "chartTenure": "15 EDITIONS"
+          },
+          {
+            "id": "50203201",
+            "name": "Hurry Up Tomorrow",
+            "artist": "The Weeknd",
+            "genres": [
+              "R&B/Soul",
+              "Música",
+              "Music"
+            ],
+            "image": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/49/9b/6e/499b6e2d-648f-1a4e-31b8-fb7f06a8123c/25UMGIM09490.rgb.jpg/768x768bb.jpg",
+            "plays": 2833,
+            "playedMs": 673679413,
+            "sourceRank": 3,
+            "powerScore": 69.966,
+            "activeDays": null,
+            "rank": 3,
+            "trajectory": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              65.782,
+              87.64,
+              100.0
+            ],
+            "trajectoryDelta": 12.36,
+            "trajectoryCaption": "CUMULATIVE LIFETIME TRAJECTORY",
+            "previousRank": 3,
+            "peakRank": 3,
+            "chartTenure": "15 EDITIONS"
+          },
+          {
+            "id": "31078",
+            "name": "Graduation",
+            "artist": "Kanye West",
+            "genres": [
+              "Hip-Hop/Rap",
+              "Music"
+            ],
+            "image": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/2f/db/2c/2fdb2c9d-171c-c6dc-57ee-4bae2b4bb11a/07UMGIM12671.rgb.jpg/768x768bb.jpg",
+            "plays": 2356,
+            "playedMs": 516071937,
+            "sourceRank": 4,
+            "powerScore": 56.896,
+            "activeDays": null,
+            "rank": 4,
+            "trajectory": [
+              0.0,
+              0.0,
+              15.787,
+              40.498,
+              67.498,
+              80.327,
+              84.51,
+              92.488,
+              98.824,
+              100.0
+            ],
+            "trajectoryDelta": 1.18,
+            "trajectoryCaption": "CUMULATIVE LIFETIME TRAJECTORY",
+            "previousRank": 4,
+            "peakRank": 4,
+            "chartTenure": "15 EDITIONS"
+          },
+          {
+            "id": "229491",
+            "name": "After Hours",
+            "artist": "The Weeknd",
+            "genres": [
+              "R&B/Soul",
+              "Music",
+              "Contemporary R&B"
+            ],
+            "image": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/03/e1/67/03e167d6-ee05-eb32-55e9-c5040f55a8bf/20UMGIM21166.rgb.jpg/768x768bb.jpg",
+            "plays": 2215,
+            "playedMs": 461035831,
+            "sourceRank": 5,
+            "powerScore": 52.786,
+            "activeDays": null,
+            "rank": 5,
+            "trajectory": [
+              0.0,
+              2.983,
+              12.099,
+              28.672,
+              42.104,
+              63.2,
+              67.432,
+              77.364,
+              92.963,
+              100.0
+            ],
+            "trajectoryDelta": 7.04,
+            "trajectoryCaption": "CUMULATIVE LIFETIME TRAJECTORY",
+            "previousRank": 5,
+            "peakRank": 5,
+            "chartTenure": "15 EDITIONS"
+          }
+        ],
+        "analysis": {
+          "headline": "Starboy controls the No. 1 position.",
+          "writeup": "Starboy leads the album rankings using the complete lifetime scoring scope with 4224 plays. The leader holds a 6.7-point margin.",
+          "leader": "Starboy",
+          "biggestMove": "Stable board",
+          "closestRace": "6.7 PTS"
+        }
+      }
+    }
+  }
+}
